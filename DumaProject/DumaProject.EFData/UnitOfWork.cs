@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DumaProject.Core.Entities;
 using DumaProject.Core.Exceptions;
 using DumaProject.DALInterfaces;
@@ -14,8 +10,8 @@ namespace DumaProject.EFData
 {
     public class UnitOfWork : IUnitOfWork, IRepositoryFactory, IDisposable
     {
-        private DumaContext _context;
-        private DbContextTransaction _transaction;
+        private readonly DumaContext _context;
+        private readonly DbContextTransaction _transaction;
         private bool _isTransactionActive;
         private bool _disposed;
         private IRepository<Member, int> _memberRepository;

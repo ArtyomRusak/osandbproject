@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Transactions;
 using DumaProject.Core.Entities;
 
@@ -46,37 +42,42 @@ namespace DumaProject.EFData.EFContext.Initializers
         {
             //TODO: First variables.
 
-            var member = new Member
-            {
-                Name = "Lesha",
-                Surname = "Yurchak",
-                Patronymic = "Vladimirovich",
-                PassportData = "MP"
-            };
+            //var member = new Member
+            //{
+            //    Name = "Lesha",
+            //    Surname = "Yurchak",
+            //    Patronymic = "Vladimirovich",
+            //    PassportData = "MP"
+            //};
 
-            context.Members.Add(member);
-            context.SaveChanges();
+            //context.Members.Add(member);
+            //context.SaveChanges();
 
-            var commission = new Commission {Name = "Hello", President = member};
-            context.Commissions.Add(commission);
+            //var commission = new Commission {Name = "Hello", President = member};
+            //context.Commissions.Add(commission);
 
-            var roleCom = new RoleCommission {Value = "Commandor"};
-            context.RoleCommissions.Add(roleCom);
+            //var roleCom = new RoleCommission {Value = "Commandor"};
+            //context.RoleCommissions.Add(roleCom);
 
-            context.SaveChanges();
-            commission.Consist.Add(member);
+            //context.SaveChanges();
+            //commission.Consist.Add(member);
 
-            var record = new JournalRecord
-            {
-                EntryDate = DateTime.Now,
-                ExitDate = DateTime.Now.AddDays(3),
-                Member = member,
-                Commission = commission,
-                Role = roleCom
-            };
 
-            commission.JournalRecords.Add(record);
+            //var record = new JournalRecord
+            //{
+            //    EntryDate = DateTime.Now,
+            //    ExitDate = DateTime.Now.AddDays(3),
+            //    Member = member,
+            //    Commission = commission,
+            //    Role = roleCom
+            //};
 
+            //commission.JournalRecords.Add(record);
+
+            //context.SaveChanges();
+
+            var role = new RoleMember {Value = "Employee"};
+            context.RoleMembers.Add(role);
             context.SaveChanges();
         }
     }

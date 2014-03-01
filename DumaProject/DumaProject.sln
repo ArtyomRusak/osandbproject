@@ -18,6 +18,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6A7FD1
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumaProject.BLInterfaces", "DumaProject.BLInterfaces\DumaProject.BLInterfaces.csproj", "{2079F67C-E2CA-4B7B-AF81-815B1A6640BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumaProject.Services", "DumaProject.Services\DumaProject.Services.csproj", "{401151C5-D2FC-48A2-AC56-D6CE6EAD351F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{0DD68BDF-0F3C-4DBF-BA01-0B09B1129A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DD68BDF-0F3C-4DBF-BA01-0B09B1129A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DD68BDF-0F3C-4DBF-BA01-0B09B1129A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2079F67C-E2CA-4B7B-AF81-815B1A6640BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2079F67C-E2CA-4B7B-AF81-815B1A6640BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2079F67C-E2CA-4B7B-AF81-815B1A6640BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2079F67C-E2CA-4B7B-AF81-815B1A6640BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401151C5-D2FC-48A2-AC56-D6CE6EAD351F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401151C5-D2FC-48A2-AC56-D6CE6EAD351F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401151C5-D2FC-48A2-AC56-D6CE6EAD351F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401151C5-D2FC-48A2-AC56-D6CE6EAD351F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

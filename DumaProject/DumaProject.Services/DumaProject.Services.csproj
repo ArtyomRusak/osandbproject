@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService.cs" />
+    <Compile Include="CommissionService.cs" />
     <Compile Include="MembershipService.cs" />
     <Compile Include="ProfileMemberService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -13,8 +13,8 @@ namespace DumaProject.Core.Entities
 
         public string Name { get; set; }
         public virtual HashSet<Member> Consist { get; set; }
-        public ProfileCommission Profile { get; set; }
-        public Member President { get; set; }
+        public virtual ProfileCommission Profile { get; set; }
+        public virtual Member President { get; set; }
         public int PresidentId { get; set; }
         public virtual HashSet<JournalRecord> JournalRecords { get; set; }
         public virtual HashSet<Meeting> Meetings { get; set; }

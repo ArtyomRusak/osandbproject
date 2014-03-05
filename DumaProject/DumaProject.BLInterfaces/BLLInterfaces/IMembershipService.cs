@@ -3,7 +3,7 @@ using DumaProject.Core.Entities;
 
 namespace DumaProject.BLInterfaces.BLLInterfaces
 {
-    public interface IMembershipService
+    public interface IMembershipService : IService
     {
         Member CreateMember(string name, string surname, string patronymic, string passportData);
         void UpdateMember(Member member);

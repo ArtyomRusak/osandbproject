@@ -40,8 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLLInterfaces\IMembershipService.cs" />
+    <Compile Include="BLLInterfaces\IProfileMemberInterface.cs" />
     <Compile Include="BLLInterfaces\IService.cs" />
     <Compile Include="Exceptions\MembershipServiceException.cs" />
+    <Compile Include="Exceptions\ProfileMemberServiceException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

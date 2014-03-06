@@ -45,6 +45,7 @@
     <Compile Include="BLLInterfaces\IProfileMemberInterface.cs" />
     <Compile Include="BLLInterfaces\IService.cs" />
     <Compile Include="Exceptions\CommissionServiceException.cs" />
+    <Compile Include="Exceptions\MeetingServiceException.cs" />
     <Compile Include="Exceptions\MembershipServiceException.cs" />
     <Compile Include="Exceptions\ProfileMemberServiceException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

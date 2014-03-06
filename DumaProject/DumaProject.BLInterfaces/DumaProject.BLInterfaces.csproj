@@ -42,11 +42,13 @@
     <Compile Include="BLLInterfaces\ICommissionService.cs" />
     <Compile Include="BLLInterfaces\IMeetingService.cs" />
     <Compile Include="BLLInterfaces\IMembershipService.cs" />
+    <Compile Include="BLLInterfaces\IProfileCommissionService.cs" />
     <Compile Include="BLLInterfaces\IProfileMemberInterface.cs" />
     <Compile Include="BLLInterfaces\IService.cs" />
     <Compile Include="Exceptions\CommissionServiceException.cs" />
     <Compile Include="Exceptions\MeetingServiceException.cs" />
     <Compile Include="Exceptions\MembershipServiceException.cs" />
+    <Compile Include="Exceptions\ProfileCommissionServiceException.cs" />
     <Compile Include="Exceptions\ProfileMemberServiceException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

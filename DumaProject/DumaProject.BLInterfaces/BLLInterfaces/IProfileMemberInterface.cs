@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DumaProject.Core.Entities;
+﻿using DumaProject.Core.Entities;
 
 namespace DumaProject.BLInterfaces.BLLInterfaces
 {

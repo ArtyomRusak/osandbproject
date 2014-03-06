@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DumaProject.BLInterfaces.BLLInterfaces;
 using DumaProject.BLInterfaces.Exceptions;
 using DumaProject.Core.Entities;
@@ -34,6 +32,8 @@ namespace DumaProject.Services
                 throw new MeetingServiceException(ex);
             }
 
+            commission.Meetings.Add(meeting);
+
             return meeting;
         }
 
@@ -51,10 +51,12 @@ namespace DumaProject.Services
                 throw new MeetingServiceException(ex);
             }
 
+            commission.Meetings.Add(meeting);
+
             return meeting;
         }
 
-        public Meeting GetMeetingById(int meetingId)
+        public Meeting GetMeetingById(long meetingId)
         {
             var meetingRepository = RepositoryFactory.GetMeetingRepository();
 
@@ -68,7 +70,7 @@ namespace DumaProject.Services
             }
         }
 
-        public void AddParticipantsForMeeting(int meetingId, ICollection<Member> participants)
+        public void AddParticipantsForMeeting(long meetingId, ICollection<Member> participants)
         {
             var meeting = GetMeetingById(meetingId);
             foreach (var participant in participants)
@@ -78,7 +80,7 @@ namespace DumaProject.Services
             }
         }
 
-        public void ExcludeParticipants(int meetingId, ICollection<Member> participants)
+        public void ExcludeParticipants(long meetingId, ICollection<Member> participants)
         {
             var meeting = GetMeetingById(meetingId);
             foreach (var participant in participants)
@@ -102,13 +104,13 @@ namespace DumaProject.Services
             }
         }
 
-        public void CancelMeeting(int meetingId)
+        public void CancelMeeting(long meetingId)
         {
             var meeting = GetMeetingById(meetingId);
             meeting.IsCancelled = true;
         }
 
-        public void EndMeeting(int meetingId)
+        public void EndMeeting(long meetingId)
         {
             var meeting = GetMeetingById(meetingId);
             meeting.IsEnded = true;

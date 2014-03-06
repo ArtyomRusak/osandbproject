@@ -8,6 +8,8 @@ namespace DumaProject.Core.Entities
         public DateTime Date { get; set; }
         public string Venue { get; set; }
         public int DurationInMinutes { get; set; }
+        public bool IsEnded { get; set; }
+        public bool IsCancelled { get; set; }
         public virtual Commission Commission { get; set; }
         public int CommissionId { get; set; }
         public virtual HashSet<Member> Participants { get; set; }

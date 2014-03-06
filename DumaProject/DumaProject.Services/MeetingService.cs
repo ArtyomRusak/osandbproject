@@ -101,5 +101,17 @@ namespace DumaProject.Services
                 throw new MeetingServiceException(ex);
             }
         }
+
+        public void CancelMeeting(int meetingId)
+        {
+            var meeting = GetMeetingById(meetingId);
+            meeting.IsCancelled = true;
+        }
+
+        public void EndMeeting(int meetingId)
+        {
+            var meeting = GetMeetingById(meetingId);
+            meeting.IsEnded = true;
+        }
     }
 }

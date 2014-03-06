@@ -7,7 +7,7 @@ using DumaProject.DALInterfaces;
 
 namespace DumaProject.Services
 {
-    public class ProfileMemberService : BaseService, IProfileMemberInterface
+    public class ProfileMemberService : BaseService, IProfileMemberService
     {
         public ProfileMemberService(IUnitOfWork unitOfWork, IRepositoryFactory repositoryFactory)
             : base(unitOfWork, repositoryFactory)

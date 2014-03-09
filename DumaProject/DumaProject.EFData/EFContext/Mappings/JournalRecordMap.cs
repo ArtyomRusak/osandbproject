@@ -9,7 +9,6 @@ namespace DumaProject.EFData.EFContext.Mappings
         {
             HasKey(e => e.Id);
             Property(e => e.EntryDate).IsRequired();
-            Property(e => e.ExitDate).IsRequired();
             HasRequired(e => e.Member).WithMany().HasForeignKey(e => e.MemberId).WillCascadeOnDelete(false);
             HasRequired(e => e.Commission).WithMany().HasForeignKey(e => e.CommissionId);
             HasRequired(e => e.Role).WithMany(e => e.JournalRecords).HasForeignKey(e => e.RoleCommissionId);

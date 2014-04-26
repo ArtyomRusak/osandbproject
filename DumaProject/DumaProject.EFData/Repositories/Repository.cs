@@ -7,7 +7,7 @@ namespace DumaProject.EFData.Repositories
     {
         protected DumaContext Context;
 
-        public Repository(DumaContext context)
+        protected Repository(DumaContext context)
         {
             Context = context;
         }

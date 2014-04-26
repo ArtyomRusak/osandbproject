@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using DumaProject.BLInterfaces.BLLInterfaces;
 using DumaProject.BLInterfaces.Exceptions;
 using DumaProject.Core.Entities;
@@ -14,7 +15,7 @@ namespace DumaProject.Services
         {
         }
 
-        public Member CreateMember(string name, string surname, string patronymic, string passportData)
+        public Member CreateMember(string name, string surname, string patronymic, string passportData, string roleName)
         {
             var roleRepository = RepositoryFactory.GetRoleMemberRepository();
             var memberRepository = RepositoryFactory.GetMemberRepository();
@@ -27,11 +28,11 @@ namespace DumaProject.Services
                 PassportData = passportData
             };
 
-            var role = roleRepository.Find(e => e.Value == "Employee");
+            var role = roleRepository.Find(e => e.Value == roleName);
             member.Role = role;
 
             memberRepository.Create(member);
-            
+
             try
             {
                 UnitOfWork.PreSave();
@@ -98,6 +99,36 @@ namespace DumaProject.Services
         {
             var member = GetMemberById(memberId);
             return member.Commissions;
+        }
+
+        public List<Member> GetAllMembers()
+        {
+            var memberRepository = RepositoryFactory.GetMemberRepository();
+
+            try
+            {
+                var members = memberRepository.All().ToList();
+                return members;
+            }
+            catch (Exception e)
+            {
+                throw new MembershipServiceException(e);
+            }
+        }
+
+        public List<RoleMember> GetAllRoles()
+        {
+            var roleMemberRepository = RepositoryFactory.GetRoleMemberRepository();
+
+            try
+            {
+                var roles = roleMemberRepository.All().ToList();
+                return roles;
+            }
+            catch (Exception e)
+            {
+                throw new MembershipServiceException(e);
+            }
         }
     }
 }

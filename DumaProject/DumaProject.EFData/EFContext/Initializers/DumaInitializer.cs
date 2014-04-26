@@ -77,7 +77,9 @@ namespace DumaProject.EFData.EFContext.Initializers
             //context.SaveChanges();
 
             var role = new RoleMember {Value = "Employee"};
+            var role2 = new RoleMember {Value = "Deputy"};
             context.RoleMembers.Add(role);
+            context.RoleMembers.Add(role2);
             context.SaveChanges();
         }
     }

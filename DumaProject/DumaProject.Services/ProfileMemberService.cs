@@ -14,7 +14,7 @@ namespace DumaProject.Services
         {
         }
 
-        public ProfileMember CreateProfile(string address, string mobileTelephone1, string mobileTelephone2, string homeNumber,
+        public ProfileMember CreateProfile(string address, string mobileTelephone1, string homeNumber,
             int memberId)
         {
             var memberRepository = RepositoryFactory.GetMemberRepository();
@@ -31,7 +31,6 @@ namespace DumaProject.Services
                 Address = address,
                 HomeNumber = homeNumber,
                 MobileTelephone1 = mobileTelephone1,
-                MobileTelephone2 = mobileTelephone2,
                 MemberId = member.Id
             };
             profileMemberRepository.Create(profile);

@@ -5,7 +5,7 @@ namespace DumaProject.BLInterfaces.BLLInterfaces
 {
     public interface IMembershipService : IService
     {
-        Member CreateMember(string name, string surname, string patronymic, string passportData);
+        Member CreateMember(string name, string surname, string patronymic, string passportData, string roleName);
         void UpdateMember(Member member);
         void RemoveMember(Member member);
         Member GetMemberById(int memberId);

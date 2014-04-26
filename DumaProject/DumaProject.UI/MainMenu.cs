@@ -11,7 +11,7 @@ namespace DumaProject.UI
 {
     public partial class MainMenu : Form
     {
-        private readonly DumaContext _context = new DumaContext(Resources.ConnectionString);
+        private DumaContext _context = new DumaContext(Resources.ConnectionString);
 
         public MainMenu()
         {
@@ -20,6 +20,10 @@ namespace DumaProject.UI
 
         private void ViewAllEmployees(object sender, EventArgs e)
         {
+            if (_context != null)
+            {
+                _context = new DumaContext(Resources.ConnectionString);
+            }
             var unitOfWork = new UnitOfWork(_context);
             var memberService = new MembershipService(unitOfWork, unitOfWork);
 

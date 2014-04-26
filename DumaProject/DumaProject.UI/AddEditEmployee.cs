@@ -13,7 +13,7 @@ namespace DumaProject.UI
         private readonly int _memberId;
         private Member _member;
         private ProfileMember _profile;
-        private bool _isEditMode;
+        private readonly bool _isEditMode;
         private readonly DumaContext _context = new DumaContext(Resources.ConnectionString);
 
         public AddEditEmployee()
@@ -106,6 +106,7 @@ namespace DumaProject.UI
                 {
                     MapToMember();
                     membershipService.UpdateMember(_member);
+                    membershipService.ChangeRole(_member.Id, cmbxRole.SelectedItem.ToString());
                     if (_profile == null)
                     {
                         _profile = profileMemberService.CreateProfile(tbxAddress.Text, tbxMobile.Text, tbxHome.Text, _member.Id);

@@ -95,6 +95,32 @@ namespace DumaProject.Services
             UpdateMember(member);
         }
 
+        public void ChangeRole(int memberId, string roleName)
+        {
+            var roleMemberRepository = RepositoryFactory.GetRoleMemberRepository();
+
+            var member = GetMemberById(memberId);
+            var role = GetRoleByName(roleName);
+
+            member.Role = role;
+            UpdateMember(member);
+        }
+
+        public RoleMember GetRoleByName(string roleName)
+        {
+            var roleMemberRepository = RepositoryFactory.GetRoleMemberRepository();
+
+            try
+            {
+                var role = roleMemberRepository.Find(e => e.Value == roleName);
+                return role;
+            }
+            catch (Exception e)
+            {
+                throw new MembershipServiceException(e);
+            }
+        }
+
         public HashSet<Commission> GetCommissionsOfMember(int memberId)
         {
             var member = GetMemberById(memberId);

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using System.Windows.Forms;
-using DumaProject.Core.Entities;
 using DumaProject.EFData;
 using DumaProject.EFData.EFContext;
 using DumaProject.Services;

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DumaProject.Core.Entities;
-using DumaProject.DALInterfaces;
 using DumaProject.EFData;
 using DumaProject.EFData.EFContext;
 using DumaProject.Services;
@@ -14,7 +13,7 @@ namespace DumaProject.UI
         private int _commissionId;
         private Commission _commission;
         private readonly DumaContext _context = new DumaContext(Resources.ConnectionString);
-        public string Name
+        public string CommissionName
         {
             get { return tbxName.Text; }
             set { tbxName.Text = value; }
@@ -34,7 +33,7 @@ namespace DumaProject.UI
             _commissionId = commissionId;
         }
 
-        private void AddChangeComission_Load(object sender, System.EventArgs e)
+        private void AddChangeComission_Load(object sender, EventArgs e)
         {
             var unitOfWork = new UnitOfWork(_context);
             var commissionService = new CommissionService(unitOfWork, unitOfWork);
@@ -47,7 +46,7 @@ namespace DumaProject.UI
             if (_commissionId != 0)
             {
                 _commission = commissionService.GetCommissionById(_commissionId);
-                Name = _commission.Name;
+                CommissionName = _commission.Name;
 
                 cmbxProfile.DataSource = profiles;
                 if (_commission.Profile == null)
@@ -69,19 +68,19 @@ namespace DumaProject.UI
             }
             else
             {
-                Name = String.Empty;
+                CommissionName = String.Empty;
                 cmbxProfile.DataSource = profiles;
                 cmbxPresident.DataSource = membersForPresident;
                 unitOfWork.Commit();
             }
         }
 
-        private void btnSave_Click(object sender, System.EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             var unitOfWork = new UnitOfWork(_context);
             var commissionService = new CommissionService(unitOfWork, unitOfWork);
 
-            if (Name == "")
+            if (CommissionName == "")
             {
                 MessageBox.Show("Enter name!");
                 return;
@@ -91,21 +90,21 @@ namespace DumaProject.UI
             {
                 if (_commission == null)
                 {
-                    _commission = commissionService.CreateCommission(Name, ProfileId, PresidentId);
+                    _commission = commissionService.CreateCommission(CommissionName, ProfileId, PresidentId);
                     _commissionId = _commission.Id;
                     unitOfWork.Commit();
                     MessageBox.Show("Successfully added commission!");
                 }
                 else
                 {
-                    _commission.Name = Name;
+                    _commission.Name = CommissionName;
                     var selectedPresident = (Member) cmbxPresident.SelectedItem;
                     commissionService.SetPresident(_commission.Id, selectedPresident);
                     commissionService.UpdateCommission(_commission);
                     MessageBox.Show("Successfully update commission!");
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Something was wrong!");
                 unitOfWork.Rollback();

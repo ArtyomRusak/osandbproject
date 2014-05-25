@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using DumaProject.Core.Entities;
 using DumaProject.EFData;
 using DumaProject.EFData.EFContext;
@@ -18,7 +19,7 @@ namespace DumaProject.UI
             _commissionId = commissionId;
         }
 
-        private void ViewComission_Load(object sender, System.EventArgs e)
+        private void ViewComission_Load(object sender, EventArgs e)
         {
             var unitOfWork = new UnitOfWork(_context);
             var commissionService = new CommissionService(unitOfWork, unitOfWork);
@@ -36,7 +37,7 @@ namespace DumaProject.UI
             _context.Dispose();
         }
 
-        private void btnAddMeeting_Click(object sender, System.EventArgs e)
+        private void btnAddMeeting_Click(object sender, EventArgs e)
         {
             var form = new AddChangeMeeting(_commissionId);
             form.ShowDialog();

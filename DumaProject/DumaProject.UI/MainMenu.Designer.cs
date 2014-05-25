@@ -31,21 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.dgvMembers = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passportDataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnMainEmployee = new System.Windows.Forms.ToolStripSplitButton();
             this.btnAddEmployee = new System.Windows.Forms.ToolStripMenuItem();
             this.editEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
-            this.addComissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnViewCommissions = new System.Windows.Forms.ToolStripSplitButton();
+            this.btnAddComission = new System.Windows.Forms.ToolStripMenuItem();
             this.editComissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteComissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
@@ -59,9 +52,24 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.dgvCommissions = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.presidentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commissionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passportDataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommissions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commissionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMembers
@@ -86,53 +94,6 @@
             this.dgvMembers.TabIndex = 0;
             this.dgvMembers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ChooseMember);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // patronymicDataGridViewTextBoxColumn
-            // 
-            this.patronymicDataGridViewTextBoxColumn.DataPropertyName = "Patronymic";
-            this.patronymicDataGridViewTextBoxColumn.HeaderText = "Patronymic";
-            this.patronymicDataGridViewTextBoxColumn.Name = "patronymicDataGridViewTextBoxColumn";
-            this.patronymicDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // passportDataDataGridViewTextBoxColumn
-            // 
-            this.passportDataDataGridViewTextBoxColumn.DataPropertyName = "PassportData";
-            this.passportDataDataGridViewTextBoxColumn.HeaderText = "PassportData";
-            this.passportDataDataGridViewTextBoxColumn.Name = "passportDataDataGridViewTextBoxColumn";
-            this.passportDataDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // roleDataGridViewTextBoxColumn
-            // 
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            this.roleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataSource = typeof(DumaProject.Core.Entities.Member);
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -141,7 +102,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnMainEmployee,
             this.toolStripSeparator2,
-            this.toolStripSplitButton3,
+            this.btnViewCommissions,
             this.toolStripSeparator9,
             this.toolStripSplitButton1,
             this.toolStripSeparator10,
@@ -197,24 +158,26 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
-            // toolStripSplitButton3
+            // btnViewCommissions
             // 
-            this.toolStripSplitButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addComissionToolStripMenuItem,
+            this.btnViewCommissions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAddComission,
             this.editComissionToolStripMenuItem,
             this.deleteComissionToolStripMenuItem});
-            this.toolStripSplitButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton3.Image")));
-            this.toolStripSplitButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton3.Name = "toolStripSplitButton3";
-            this.toolStripSplitButton3.Size = new System.Drawing.Size(99, 28);
-            this.toolStripSplitButton3.Text = "Comissions";
+            this.btnViewCommissions.Image = ((System.Drawing.Image)(resources.GetObject("btnViewCommissions.Image")));
+            this.btnViewCommissions.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnViewCommissions.Name = "btnViewCommissions";
+            this.btnViewCommissions.Size = new System.Drawing.Size(99, 28);
+            this.btnViewCommissions.Text = "Comissions";
+            this.btnViewCommissions.ButtonClick += new System.EventHandler(this.btnViewCommissions_ButtonClick);
             // 
-            // addComissionToolStripMenuItem
+            // btnAddComission
             // 
-            this.addComissionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addComissionToolStripMenuItem.Image")));
-            this.addComissionToolStripMenuItem.Name = "addComissionToolStripMenuItem";
-            this.addComissionToolStripMenuItem.Size = new System.Drawing.Size(162, 30);
-            this.addComissionToolStripMenuItem.Text = "Add comission";
+            this.btnAddComission.Image = ((System.Drawing.Image)(resources.GetObject("btnAddComission.Image")));
+            this.btnAddComission.Name = "btnAddComission";
+            this.btnAddComission.Size = new System.Drawing.Size(162, 30);
+            this.btnAddComission.Text = "Add comission";
+            this.btnAddComission.Click += new System.EventHandler(this.btnAddComission_Click);
             // 
             // editComissionToolStripMenuItem
             // 
@@ -305,21 +268,123 @@
             this.toolStripTextBox1.Size = new System.Drawing.Size(125, 31);
             this.toolStripTextBox1.Tag = "";
             // 
+            // dgvCommissions
+            // 
+            this.dgvCommissions.AllowUserToAddRows = false;
+            this.dgvCommissions.AllowUserToDeleteRows = false;
+            this.dgvCommissions.AutoGenerateColumns = false;
+            this.dgvCommissions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCommissions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.nameDataGridViewTextBoxColumn1,
+            this.profileDataGridViewTextBoxColumn,
+            this.presidentDataGridViewTextBoxColumn});
+            this.dgvCommissions.DataSource = this.commissionBindingSource;
+            this.dgvCommissions.Location = new System.Drawing.Point(140, 34);
+            this.dgvCommissions.Name = "dgvCommissions";
+            this.dgvCommissions.ReadOnly = true;
+            this.dgvCommissions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCommissions.Size = new System.Drawing.Size(554, 395);
+            this.dgvCommissions.TabIndex = 14;
+            this.dgvCommissions.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommissions_CellContentDoubleClick);
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // profileDataGridViewTextBoxColumn
+            // 
+            this.profileDataGridViewTextBoxColumn.DataPropertyName = "Profile";
+            this.profileDataGridViewTextBoxColumn.HeaderText = "Profile";
+            this.profileDataGridViewTextBoxColumn.Name = "profileDataGridViewTextBoxColumn";
+            this.profileDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // presidentDataGridViewTextBoxColumn
+            // 
+            this.presidentDataGridViewTextBoxColumn.DataPropertyName = "President";
+            this.presidentDataGridViewTextBoxColumn.HeaderText = "President";
+            this.presidentDataGridViewTextBoxColumn.Name = "presidentDataGridViewTextBoxColumn";
+            this.presidentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // commissionBindingSource
+            // 
+            this.commissionBindingSource.DataSource = typeof(DumaProject.Core.Entities.Commission);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // patronymicDataGridViewTextBoxColumn
+            // 
+            this.patronymicDataGridViewTextBoxColumn.DataPropertyName = "Patronymic";
+            this.patronymicDataGridViewTextBoxColumn.HeaderText = "Patronymic";
+            this.patronymicDataGridViewTextBoxColumn.Name = "patronymicDataGridViewTextBoxColumn";
+            this.patronymicDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passportDataDataGridViewTextBoxColumn
+            // 
+            this.passportDataDataGridViewTextBoxColumn.DataPropertyName = "PassportData";
+            this.passportDataDataGridViewTextBoxColumn.HeaderText = "PassportData";
+            this.passportDataDataGridViewTextBoxColumn.Name = "passportDataDataGridViewTextBoxColumn";
+            this.passportDataDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roleDataGridViewTextBoxColumn
+            // 
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            this.roleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataSource = typeof(DumaProject.Core.Entities.Member);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(821, 441);
+            this.Controls.Add(this.dgvCommissions);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvMembers);
             this.Name = "MainMenu";
             this.Text = "State Duma";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommissions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commissionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,8 +403,8 @@
         private System.Windows.Forms.ToolStripSplitButton btnMainEmployee;
         private System.Windows.Forms.ToolStripMenuItem btnAddEmployee;
         private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton3;
-        private System.Windows.Forms.ToolStripMenuItem addComissionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSplitButton btnViewCommissions;
+        private System.Windows.Forms.ToolStripMenuItem btnAddComission;
         private System.Windows.Forms.ToolStripMenuItem deleteComissionToolStripMenuItem;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem addMeetingToolStripMenuItem;
@@ -356,6 +421,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passportDataDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvCommissions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn profileDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn presidentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource commissionBindingSource;
     }
 }
 

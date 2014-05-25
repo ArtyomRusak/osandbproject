@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DumaProject.Core.Entities
 {
@@ -10,5 +11,15 @@ namespace DumaProject.Core.Entities
         public string PassportData { get; set; }
         public virtual RoleMember Role { get; set; }
         public virtual HashSet<Commission> Commissions { get; set; }
+
+        public string NSP
+        {
+            get { return String.Format("{0} {1} {2}", Name, Surname, Patronymic); }
+        }
+
+        public override string ToString()
+        {
+            return NSP;
+        }
     }
 }

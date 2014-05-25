@@ -22,7 +22,7 @@ namespace DumaProject.Services
         {
             var profileCommissionRepository = RepositoryFactory.GetProfileCommissionRepository();
 
-            var profile = new ProfileCommission { Description = description, CommissionId = commissionId };
+            var profile = new ProfileCommission { Description = description };
             profileCommissionRepository.Create(profile);
 
             try
@@ -65,14 +65,38 @@ namespace DumaProject.Services
             }
         }
 
-        public ProfileCommission GetProfileById(int commissionId)
+        public ProfileCommission GetProfileByCommissionId(int commissionId)
+        {
+            var profileCommissionRepository = RepositoryFactory.GetProfileCommissionRepository();
+            var commissionRepository = RepositoryFactory.GetCommissionRepository();
+
+            var commission = commissionRepository.GetEntityById(commissionId);
+
+            if (commission == null)
+            {
+                return null;
+            }
+
+            try
+            {
+                var profile =
+                    profileCommissionRepository.All().SingleOrDefault(e => e.Commissions.Contains(commission));
+                return profile;
+            }
+            catch (RepositoryException ex)
+            {
+                throw new ProfileCommissionServiceException(ex);
+            }
+        }
+
+        public List<ProfileCommission> GetAllProfiles()
         {
             var profileCommissionRepository = RepositoryFactory.GetProfileCommissionRepository();
 
             try
             {
-                var profile = profileCommissionRepository.Find(e => e.CommissionId == commissionId);
-                return profile;
+                var profiles = profileCommissionRepository.All().ToList();
+                return profiles;
             }
             catch (RepositoryException ex)
             {

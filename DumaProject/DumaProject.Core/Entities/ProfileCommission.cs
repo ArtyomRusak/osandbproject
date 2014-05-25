@@ -1,9 +1,15 @@
-﻿namespace DumaProject.Core.Entities
+﻿using System.Collections.Generic;
+
+namespace DumaProject.Core.Entities
 {
     public class ProfileCommission : Entity<int>
     {
         public string Description { get; set; }
-        public virtual Commission Commission { get; set; }
-        public int CommissionId { get; set; }
+        public virtual List<Commission> Commissions { get; set; }
+
+        public override string ToString()
+        {
+            return Description;
+        }
     }
 }

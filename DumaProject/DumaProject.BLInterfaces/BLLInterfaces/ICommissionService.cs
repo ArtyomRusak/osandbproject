@@ -6,12 +6,14 @@ namespace DumaProject.BLInterfaces.BLLInterfaces
     public interface ICommissionService : IService
     {
         Commission CreateCommission(string name);
-        Commission CreateCommission(string name, int presidentId);
+        Commission CreateCommission(string name, int profileId, int presidentId);
+        void UpdateCommission(Commission commission);
         void RemoveCommission(Commission commission);
         Commission GetCommissionById(int commissionId);
         Member SetPresident(int commissionId, Member member);
         void AddMemberToCommission(int commissionId, Member member);
         void ExcludeMemberFromCommission(int commissionId, Member member);
-        HashSet<Member> GetMembersOfCommission(int commissionId); 
+        List<Member> GetMembersOfCommission(int commissionId);
+        List<Commission> GetAllCommissions();
     }
 }

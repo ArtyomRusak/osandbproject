@@ -245,8 +245,12 @@
     <EmbeddedResource Include="ViewMeetingMembers.resx">
       <DependentUpon>ViewMeetingMembers.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\DumaProject.Core.Entities.Commission.datasource" />
     <None Include="Properties\DataSources\DumaProject.Core.Entities.Member.datasource" />
+    <None Include="Properties\DataSources\DumaProject.Core.Entities.ProfileCommission.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

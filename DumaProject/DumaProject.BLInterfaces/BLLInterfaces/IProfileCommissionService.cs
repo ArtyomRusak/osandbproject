@@ -1,4 +1,5 @@
-﻿using DumaProject.Core.Entities;
+﻿using System.Collections.Generic;
+using DumaProject.Core.Entities;
 
 namespace DumaProject.BLInterfaces.BLLInterfaces
 {
@@ -7,6 +8,7 @@ namespace DumaProject.BLInterfaces.BLLInterfaces
         ProfileCommission CreateProfile(string description, int commissionId);
         void UpdateProfile(ProfileCommission profile);
         void RemoveProfile(ProfileCommission profile);
-        ProfileCommission GetProfileById(int commissionId);
+        ProfileCommission GetProfileByCommissionId(int commissionId);
+        List<ProfileCommission> GetAllProfiles();
     }
 }

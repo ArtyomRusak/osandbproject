@@ -127,6 +127,25 @@ namespace DumaProject.Services
             return member.Commissions;
         }
 
+        public List<Member> GetMembersExceptOfCommission(int commissionId)
+        {
+            var memberRepository = RepositoryFactory.GetMemberRepository();
+            var commissionRepository = RepositoryFactory.GetCommissionRepository();
+
+            var commission = commissionRepository.GetEntityById(commissionId);
+
+            try
+            {
+                var members =
+                    memberRepository.All().ToList().Where(e => e.Commissions.Contains(commission) == false).ToList();
+                return members;
+            }
+            catch (Exception ex)
+            {
+                throw new MembershipServiceException(ex);
+            }
+        }
+
         public List<Member> GetAllMembers()
         {
             var memberRepository = RepositoryFactory.GetMemberRepository();

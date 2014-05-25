@@ -11,5 +11,6 @@ namespace DumaProject.BLInterfaces.BLLInterfaces
         Member GetMemberById(int memberId);
         void ChangeRole(int memberId, RoleMember role);
         HashSet<Commission> GetCommissionsOfMember(int memberId);
+        List<Member> GetMembersExceptOfCommission(int commissionId);
     }
 }

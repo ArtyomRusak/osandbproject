@@ -16,11 +16,12 @@ namespace DumaProject.Services
         {
         }
 
-        public Meeting SetMeetingForCommission(DateTime date, string venue, int durationInMinutes, Commission commission)
+        public Meeting SetMeetingForCommission(DateTime date, string venue, int durationInMinutes, int commissionId)
         {
             var meetingRepository = RepositoryFactory.GetMeetingRepository();
+            var commissionRepository = RepositoryFactory.GetCommissionRepository();
 
-            var meeting = new Meeting { Date = date, DurationInMinutes = durationInMinutes, CommissionId = commission.Id };
+            var meeting = new Meeting { Date = date, Venue = venue, DurationInMinutes = durationInMinutes, CommissionId = commissionId };
             meetingRepository.Create(meeting);
 
             try
@@ -32,6 +33,7 @@ namespace DumaProject.Services
                 throw new MeetingServiceException(ex);
             }
 
+            var commission = commissionRepository.GetEntityById(commissionId);
             commission.Meetings.Add(meeting);
 
             return meeting;
@@ -65,6 +67,20 @@ namespace DumaProject.Services
                 return meetingRepository.GetEntityById(meetingId);
             }
             catch (RepositoryException ex)
+            {
+                throw new MeetingServiceException(ex);
+            }
+        }
+
+        public void UpdateMeeting(Meeting meeting)
+        {
+            var meetingRepository = RepositoryFactory.GetMeetingRepository();
+
+            try
+            {
+                meetingRepository.Update(meeting);
+            }
+            catch (Exception ex)
             {
                 throw new MeetingServiceException(ex);
             }

@@ -124,11 +124,11 @@
     <Compile Include="AddChangeComission.Designer.cs">
       <DependentUpon>AddChangeComission.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewComission.cs">
+    <Compile Include="ViewCommission.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewComission.Designer.cs">
-      <DependentUpon>ViewComission.cs</DependentUpon>
+    <Compile Include="ViewCommission.Designer.cs">
+      <DependentUpon>ViewCommission.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -211,8 +211,8 @@
     <EmbeddedResource Include="AddChangeComission.resx">
       <DependentUpon>AddChangeComission.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewComission.resx">
-      <DependentUpon>ViewComission.cs</DependentUpon>
+    <EmbeddedResource Include="ViewCommission.resx">
+      <DependentUpon>ViewCommission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

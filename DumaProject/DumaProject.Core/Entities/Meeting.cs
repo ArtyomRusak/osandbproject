@@ -5,6 +5,11 @@ namespace DumaProject.Core.Entities
 {
     public class Meeting : Entity<long>
     {
+        public Meeting()
+        {
+            Participants = new List<Member>();
+        }
+
         public DateTime Date { get; set; }
         public string Venue { get; set; }
         public int DurationInMinutes { get; set; }
@@ -12,6 +17,6 @@ namespace DumaProject.Core.Entities
         public bool IsCancelled { get; set; }
         public virtual Commission Commission { get; set; }
         public int CommissionId { get; set; }
-        public virtual HashSet<Member> Participants { get; set; }
+        public virtual List<Member> Participants { get; set; }
     }
 }

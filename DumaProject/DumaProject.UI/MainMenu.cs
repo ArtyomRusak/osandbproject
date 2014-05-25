@@ -86,8 +86,25 @@ namespace DumaProject.UI
         private void dgvCommissions_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var commissionId = Convert.ToInt32(dgvCommissions.Rows[e.RowIndex].Cells[0].Value);
-            var form = new AddChangeComission(commissionId);
+            //var form = new AddChangeComission(commissionId);
+            var form = new ViewCommission(commissionId);
             form.ShowDialog();
         }
+
+        private void editComissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvCommissions.CurrentRow != null)
+            {
+                var commissionId = Convert.ToInt32(dgvCommissions.CurrentRow.Cells[0].Value);
+                var form = new AddChangeComission(commissionId);
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Выберите коммисию для показа");
+            }
+        }
+
+        //TODO: Do method to refresh all dataGridViews.
     }
 }

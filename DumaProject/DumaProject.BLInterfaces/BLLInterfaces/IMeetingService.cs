@@ -6,9 +6,10 @@ namespace DumaProject.BLInterfaces.BLLInterfaces
 {
     public interface IMeetingService : IService
     {
-        Meeting SetMeetingForCommission(DateTime date, string venue, int durationInMinutes, Commission commission);
+        Meeting SetMeetingForCommission(DateTime date, string venue, int durationInMinutes, int commissionId);
         Meeting SetMeetingForCommission(Meeting meeting, Commission commission);
         Meeting GetMeetingById(long meetingId);
+        void UpdateMeeting(Meeting meeting);
         void AddParticipantsForMeeting(long meetingId, ICollection<Member> participants);
         void ExcludeParticipants(long meetingId, ICollection<Member> participants);
         HashSet<Meeting> GetMeetingsForCommission(Commission commission);

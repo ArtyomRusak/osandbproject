@@ -147,6 +147,8 @@ namespace DumaProject.UI
                 return;
             }
 
+            SetDatasourcesToNull();
+
             lbxMembers.DataSource = GetMembersNonCommission(null);
             lbxCommissionMembers.DataSource = members;
         }
@@ -173,6 +175,8 @@ namespace DumaProject.UI
                 return;
             }
 
+            SetDatasourcesToNull();
+
             lbxMembers.DataSource = GetMembersNonCommission(null);
             lbxCommissionMembers.DataSource = members;
         }
@@ -196,6 +200,12 @@ namespace DumaProject.UI
             }
 
             return members;
+        }
+        
+        private void SetDatasourcesToNull()
+        {
+            lbxMembers.DataSource = null;
+            lbxCommissionMembers.DataSource = null;
         }
     }
 }

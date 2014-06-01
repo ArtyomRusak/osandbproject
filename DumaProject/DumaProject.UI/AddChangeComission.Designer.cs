@@ -261,7 +261,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.CommissionName = "AddChangeComission";
             this.Text = "Add comission";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddChangeComission_FormClosing);
             this.Load += new System.EventHandler(this.AddChangeComission_Load);

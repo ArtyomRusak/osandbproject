@@ -105,14 +105,14 @@ namespace DumaProject.Services
             }
         }
 
-        public HashSet<Meeting> GetMeetingsForCommission(Commission commission)
+        public List<Meeting> GetMeetingsForCommission(Commission commission)
         {
             var meetingRepository = RepositoryFactory.GetMeetingRepository();
 
             try
             {
                 var meetings = meetingRepository.Filter(e => e.CommissionId == commission.Id).ToList();
-                return new HashSet<Meeting>(meetings);
+                return meetings;
             }
             catch (RepositoryException ex)
             {

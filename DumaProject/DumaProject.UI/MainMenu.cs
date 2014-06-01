@@ -40,6 +40,7 @@ namespace DumaProject.UI
         {
             var form = new AddEditEmployee();
             form.ShowDialog();
+            UpdateGrids();
         }
 
         private void ChooseMember(object sender, DataGridViewCellEventArgs e)
@@ -47,6 +48,7 @@ namespace DumaProject.UI
             var memberId = Convert.ToInt32(dgvMembers.Rows[e.RowIndex].Cells[0].Value);
             var form = new AddEditEmployee(memberId);
             form.ShowDialog();
+            UpdateGrids();
         }
 
         private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
@@ -58,6 +60,7 @@ namespace DumaProject.UI
         {
             var form = new AddChangeComission();
             form.ShowDialog();
+            UpdateGrids();
         }
 
         private void btnViewCommissions_ButtonClick(object sender, EventArgs e)
@@ -95,11 +98,34 @@ namespace DumaProject.UI
                 var commissionId = Convert.ToInt32(dgvCommissions.CurrentRow.Cells[0].Value);
                 var form = new AddChangeComission(commissionId);
                 form.ShowDialog();
+                UpdateGrids();
             }
             else
             {
                 MessageBox.Show("Выберите коммисию для показа");
             }
+        }
+
+        private void UpdateGrids()
+        {
+            if (_context != null)
+            {
+                _context = new DumaContext(Resources.ConnectionString);
+            }
+            var unitOfWork = new UnitOfWork(_context);
+            var commissionService = new CommissionService(unitOfWork, unitOfWork);
+            var membershipService = new MembershipService(unitOfWork, unitOfWork);
+
+            dgvCommissions.DataSource = null;
+            dgvMembers.DataSource = null;
+
+            var members = membershipService.GetAllMembers();
+            var commissions = commissionService.GetAllCommissions();
+
+            dgvCommissions.DataSource = commissions;
+            dgvMembers.DataSource = members;
+
+            unitOfWork.Commit();
         }
 
         //TODO: Do method to refresh all dataGridViews.

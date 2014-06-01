@@ -101,6 +101,7 @@ namespace DumaProject.UI
                     var selectedPresident = (Member) cmbxPresident.SelectedItem;
                     commissionService.SetPresident(_commission.Id, selectedPresident);
                     commissionService.UpdateCommission(_commission);
+                    unitOfWork.Commit();
                     MessageBox.Show("Successfully update commission!");
                 }
             }

@@ -42,5 +42,11 @@ namespace DumaProject.UI
             var form = new AddChangeMeeting(_commissionId);
             form.ShowDialog();
         }
+
+        private void btnMeetings_Click(object sender, EventArgs e)
+        {
+            var form = new ViewMeetingComissions(_commissionId);
+            form.ShowDialog();
+        }
     }
 }

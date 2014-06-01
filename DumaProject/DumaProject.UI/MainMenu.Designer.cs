@@ -60,11 +60,11 @@
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.dgvCommissions = new System.Windows.Forms.DataGridView();
-            this.commissionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.presidentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commissionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -336,10 +336,6 @@
             this.dgvCommissions.TabIndex = 14;
             this.dgvCommissions.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommissions_CellContentDoubleClick);
             // 
-            // commissionBindingSource
-            // 
-            this.commissionBindingSource.DataSource = typeof(DumaProject.Core.Entities.Commission);
-            // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -368,6 +364,10 @@
             this.presidentDataGridViewTextBoxColumn.HeaderText = "President";
             this.presidentDataGridViewTextBoxColumn.Name = "presidentDataGridViewTextBoxColumn";
             this.presidentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // commissionBindingSource
+            // 
+            this.commissionBindingSource.DataSource = typeof(DumaProject.Core.Entities.Commission);
             // 
             // MainMenu
             // 

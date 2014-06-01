@@ -249,6 +249,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\DumaProject.Core.Entities.Commission.datasource" />
+    <None Include="Properties\DataSources\DumaProject.Core.Entities.Meeting.datasource" />
     <None Include="Properties\DataSources\DumaProject.Core.Entities.Member.datasource" />
     <None Include="Properties\DataSources\DumaProject.Core.Entities.ProfileCommission.datasource" />
     <None Include="Properties\Settings.settings">

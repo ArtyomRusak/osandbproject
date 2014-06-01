@@ -135,6 +135,7 @@
             this.btnMeetings.TabIndex = 8;
             this.btnMeetings.Text = "Meetings";
             this.btnMeetings.UseVisualStyleBackColor = true;
+            this.btnMeetings.Click += new System.EventHandler(this.btnMeetings_Click);
             // 
             // btnHistory
             // 

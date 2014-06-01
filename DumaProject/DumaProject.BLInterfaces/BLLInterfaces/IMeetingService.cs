@@ -12,7 +12,7 @@ namespace DumaProject.BLInterfaces.BLLInterfaces
         void UpdateMeeting(Meeting meeting);
         void AddParticipantsForMeeting(long meetingId, ICollection<Member> participants);
         void ExcludeParticipants(long meetingId, ICollection<Member> participants);
-        HashSet<Meeting> GetMeetingsForCommission(Commission commission);
+        List<Meeting> GetMeetingsForCommission(Commission commission);
         void CancelMeeting(long meetingId);
         void EndMeeting(long meetingId);
     }

@@ -192,6 +192,7 @@
             this.editEmployeeToolStripMenuItem.Name = "editEmployeeToolStripMenuItem";
             this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.editEmployeeToolStripMenuItem.Text = "Edit employee";
+            this.editEmployeeToolStripMenuItem.Click += new System.EventHandler(this.editEmployeeToolStripMenuItem_Click);
             // 
             // deleteEmployeeToolStripMenuItem
             // 

@@ -121,7 +121,7 @@ namespace DumaProject.Services
             }
         }
 
-        public HashSet<Commission> GetCommissionsOfMember(int memberId)
+        public List<Commission> GetCommissionsOfMember(int memberId)
         {
             var member = GetMemberById(memberId);
             return member.Commissions;

@@ -46,7 +46,7 @@ namespace DumaProject.UI
         private void ChooseMember(object sender, DataGridViewCellEventArgs e)
         {
             var memberId = Convert.ToInt32(dgvMembers.Rows[e.RowIndex].Cells[0].Value);
-            var form = new AddEditEmployee(memberId);
+            var form = new ViewEmployee(memberId);
             form.ShowDialog();
             UpdateGrids();
         }
@@ -104,6 +104,13 @@ namespace DumaProject.UI
             {
                 MessageBox.Show("Выберите коммисию для показа");
             }
+        }
+
+        private void editEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var memberId = Convert.ToInt32(dgvMembers.CurrentRow.Cells[0].Value);
+            var form = new AddEditEmployee(memberId);
+            form.ShowDialog();
         }
 
         private void UpdateGrids()

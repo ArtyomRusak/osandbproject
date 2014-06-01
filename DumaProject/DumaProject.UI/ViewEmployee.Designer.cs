@@ -1,6 +1,6 @@
-﻿namespace duma_project
+﻿namespace DumaProject.UI
 {
-    partial class ViewEmployee1
+    partial class ViewEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewEmployee1));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewEmployee));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbxMobile = new System.Windows.Forms.TextBox();
+            this.tbxHome = new System.Windows.Forms.TextBox();
+            this.tbxAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,26 +52,41 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCommissions = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvMeetings = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.venueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durationInMinutesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isEndedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.isCancelledDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.commissionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meetingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.presidentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commissionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommissions)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMeetings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meetingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commissionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.tbxMobile);
+            this.groupBox2.Controls.Add(this.tbxHome);
+            this.groupBox2.Controls.Add(this.tbxAddress);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
@@ -82,32 +98,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Contacts";
             // 
-            // textBox1
+            // tbxMobile
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(91, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 18;
+            this.tbxMobile.Enabled = false;
+            this.tbxMobile.Location = new System.Drawing.Point(91, 80);
+            this.tbxMobile.Name = "tbxMobile";
+            this.tbxMobile.ReadOnly = true;
+            this.tbxMobile.Size = new System.Drawing.Size(153, 20);
+            this.tbxMobile.TabIndex = 18;
             // 
-            // textBox2
+            // tbxHome
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(91, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 17;
+            this.tbxHome.Enabled = false;
+            this.tbxHome.Location = new System.Drawing.Point(91, 54);
+            this.tbxHome.Name = "tbxHome";
+            this.tbxHome.ReadOnly = true;
+            this.tbxHome.Size = new System.Drawing.Size(153, 20);
+            this.tbxHome.TabIndex = 17;
             // 
-            // textBox3
+            // tbxAddress
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(91, 26);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(153, 20);
-            this.textBox3.TabIndex = 16;
+            this.tbxAddress.Enabled = false;
+            this.tbxAddress.Location = new System.Drawing.Point(91, 26);
+            this.tbxAddress.Name = "tbxAddress";
+            this.tbxAddress.ReadOnly = true;
+            this.tbxAddress.Size = new System.Drawing.Size(153, 20);
+            this.tbxAddress.TabIndex = 16;
             // 
             // label1
             // 
@@ -251,7 +267,7 @@
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dgvCommissions);
             this.groupBox3.Location = new System.Drawing.Point(294, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(525, 196);
@@ -287,19 +303,29 @@
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvCommissions
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(512, 128);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvCommissions.AllowUserToAddRows = false;
+            this.dgvCommissions.AllowUserToDeleteRows = false;
+            this.dgvCommissions.AutoGenerateColumns = false;
+            this.dgvCommissions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCommissions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.profileDataGridViewTextBoxColumn,
+            this.presidentDataGridViewTextBoxColumn});
+            this.dgvCommissions.DataSource = this.commissionBindingSource;
+            this.dgvCommissions.Location = new System.Drawing.Point(7, 20);
+            this.dgvCommissions.Name = "dgvCommissions";
+            this.dgvCommissions.ReadOnly = true;
+            this.dgvCommissions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCommissions.Size = new System.Drawing.Size(512, 128);
+            this.dgvCommissions.TabIndex = 0;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.dataGridView2);
+            this.groupBox4.Controls.Add(this.dgvMeetings);
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.button6);
             this.groupBox4.Location = new System.Drawing.Point(294, 223);
@@ -318,14 +344,27 @@
             this.button4.TabIndex = 6;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgvMeetings
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(7, 19);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(512, 126);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvMeetings.AllowUserToAddRows = false;
+            this.dgvMeetings.AllowUserToDeleteRows = false;
+            this.dgvMeetings.AutoGenerateColumns = false;
+            this.dgvMeetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMeetings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.dateDataGridViewTextBoxColumn,
+            this.venueDataGridViewTextBoxColumn,
+            this.durationInMinutesDataGridViewTextBoxColumn,
+            this.isEndedDataGridViewCheckBoxColumn,
+            this.isCancelledDataGridViewCheckBoxColumn,
+            this.commissionDataGridViewTextBoxColumn});
+            this.dgvMeetings.DataSource = this.meetingBindingSource;
+            this.dgvMeetings.Location = new System.Drawing.Point(7, 19);
+            this.dgvMeetings.Name = "dgvMeetings";
+            this.dgvMeetings.ReadOnly = true;
+            this.dgvMeetings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMeetings.Size = new System.Drawing.Size(512, 126);
+            this.dgvMeetings.TabIndex = 1;
             // 
             // button5
             // 
@@ -356,8 +395,98 @@
             this.button7.TabIndex = 10;
             this.button7.Text = "Close";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // ViewEmployee1
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // venueDataGridViewTextBoxColumn
+            // 
+            this.venueDataGridViewTextBoxColumn.DataPropertyName = "Venue";
+            this.venueDataGridViewTextBoxColumn.HeaderText = "Venue";
+            this.venueDataGridViewTextBoxColumn.Name = "venueDataGridViewTextBoxColumn";
+            this.venueDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // durationInMinutesDataGridViewTextBoxColumn
+            // 
+            this.durationInMinutesDataGridViewTextBoxColumn.DataPropertyName = "DurationInMinutes";
+            this.durationInMinutesDataGridViewTextBoxColumn.HeaderText = "DurationInMinutes";
+            this.durationInMinutesDataGridViewTextBoxColumn.Name = "durationInMinutesDataGridViewTextBoxColumn";
+            this.durationInMinutesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // isEndedDataGridViewCheckBoxColumn
+            // 
+            this.isEndedDataGridViewCheckBoxColumn.DataPropertyName = "IsEnded";
+            this.isEndedDataGridViewCheckBoxColumn.HeaderText = "IsEnded";
+            this.isEndedDataGridViewCheckBoxColumn.Name = "isEndedDataGridViewCheckBoxColumn";
+            this.isEndedDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.isEndedDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // isCancelledDataGridViewCheckBoxColumn
+            // 
+            this.isCancelledDataGridViewCheckBoxColumn.DataPropertyName = "IsCancelled";
+            this.isCancelledDataGridViewCheckBoxColumn.HeaderText = "IsCancelled";
+            this.isCancelledDataGridViewCheckBoxColumn.Name = "isCancelledDataGridViewCheckBoxColumn";
+            this.isCancelledDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.isCancelledDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // commissionDataGridViewTextBoxColumn
+            // 
+            this.commissionDataGridViewTextBoxColumn.DataPropertyName = "Commission";
+            this.commissionDataGridViewTextBoxColumn.HeaderText = "Commission";
+            this.commissionDataGridViewTextBoxColumn.Name = "commissionDataGridViewTextBoxColumn";
+            this.commissionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // meetingBindingSource
+            // 
+            this.meetingBindingSource.DataSource = typeof(DumaProject.Core.Entities.Meeting);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // profileDataGridViewTextBoxColumn
+            // 
+            this.profileDataGridViewTextBoxColumn.DataPropertyName = "Profile";
+            this.profileDataGridViewTextBoxColumn.HeaderText = "Profile";
+            this.profileDataGridViewTextBoxColumn.Name = "profileDataGridViewTextBoxColumn";
+            this.profileDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // presidentDataGridViewTextBoxColumn
+            // 
+            this.presidentDataGridViewTextBoxColumn.DataPropertyName = "President";
+            this.presidentDataGridViewTextBoxColumn.HeaderText = "President";
+            this.presidentDataGridViewTextBoxColumn.Name = "presidentDataGridViewTextBoxColumn";
+            this.presidentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // commissionBindingSource
+            // 
+            this.commissionBindingSource.DataSource = typeof(DumaProject.Core.Entities.Commission);
+            // 
+            // ViewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -368,16 +497,20 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ViewEmployee1";
-            this.Text = "ViewEmployee1";
+            this.Name = "ViewEmployee";
+            this.Text = "ViewEmployee";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewEmployee_FormClosed);
+            this.Load += new System.EventHandler(this.ViewEmployee_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommissions)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMeetings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meetingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commissionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -385,9 +518,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxMobile;
+        private System.Windows.Forms.TextBox tbxHome;
+        private System.Windows.Forms.TextBox tbxAddress;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -403,15 +536,28 @@
         private System.Windows.Forms.TextBox tbxPatronymic;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCommissions;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvMeetings;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn profileDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn presidentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource commissionBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn venueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn durationInMinutesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isEndedDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isCancelledDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commissionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource meetingBindingSource;
     }
 }

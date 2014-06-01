@@ -19,5 +19,10 @@ namespace DumaProject.Core.Entities
         public int PresidentId { get; set; }
         public virtual List<JournalRecord> JournalRecords { get; set; }
         public virtual List<Meeting> Meetings { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

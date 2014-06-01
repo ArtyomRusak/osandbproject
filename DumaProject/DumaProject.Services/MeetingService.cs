@@ -131,5 +131,22 @@ namespace DumaProject.Services
             var meeting = GetMeetingById(meetingId);
             meeting.IsEnded = true;
         }
+
+        public List<Meeting> GetMeetingsOfMemberParticipate(int memberId)
+        {
+            var memberRepository = RepositoryFactory.GetMemberRepository();
+            var meetingRepository = RepositoryFactory.GetMeetingRepository();
+
+            try
+            {
+                var member = memberRepository.GetEntityById(memberId);
+                var meetings = meetingRepository.All().ToList().Where(e => e.Participants.Contains(member)).ToList();
+                return meetings;
+            }
+            catch (Exception ex)
+            {
+                throw new MeetingServiceException(ex);
+            }
+        }
     }
 }

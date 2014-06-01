@@ -10,7 +10,7 @@ namespace DumaProject.Core.Entities
         public string Patronymic { get; set; }
         public string PassportData { get; set; }
         public virtual RoleMember Role { get; set; }
-        public virtual HashSet<Commission> Commissions { get; set; }
+        public virtual List<Commission> Commissions { get; set; }
 
         public string NSP
         {

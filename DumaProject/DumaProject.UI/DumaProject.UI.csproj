@@ -112,12 +112,6 @@
     <Compile Include="ViewEmployeeAddComission.Designer.cs">
       <DependentUpon>ViewEmployeeAddComission.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewEmployee1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewEmployee1.Designer.cs">
-      <DependentUpon>ViewEmployee1.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddChangeComission.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +198,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewEmployeeAddComission.resx">
       <DependentUpon>ViewEmployeeAddComission.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewEmployee1.resx">
-      <DependentUpon>ViewEmployee1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddChangeComission.resx">
       <DependentUpon>AddChangeComission.cs</DependentUpon>

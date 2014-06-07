@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using DumaProject.Core.Entities;
 using DumaProject.EFData;
 using DumaProject.EFData.EFContext;
 using DumaProject.Services;
@@ -170,6 +171,34 @@ namespace DumaProject.UI
             var form = new AddChangeMeeting(meetingId);
             form.ShowDialog();
             UpdateGrids();
+        }
+
+        private void btnDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            var member = (Member) dgvMembers.CurrentRow.DataBoundItem;
+            var dialogResult = MessageBox.Show(
+                String.Format("Вы действительно хотите удалить {0}", member.NSP), "Removing", MessageBoxButtons.YesNo);
+            switch (dialogResult)
+            {
+                case DialogResult.Yes:
+                {
+                    var unitOfWork = new UnitOfWork(_context);
+                    var membershipService = new MembershipService(unitOfWork, unitOfWork);
+                    try
+                    {
+                        membershipService.RemoveMember(member);
+                        unitOfWork.Commit();
+                        UpdateGrids();
+                    }
+                    catch (Exception exception)
+                    {
+                        unitOfWork.Rollback();
+                    }
+                }
+                    break;
+                case DialogResult.No:
+                    return;
+            }
         }
 
         //TODO: Do method to refresh all dataGridViews.

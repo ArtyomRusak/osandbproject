@@ -5,6 +5,11 @@ namespace DumaProject.Core.Entities
 {
     public class Member : Entity<int>
     {
+        public Member()
+        {
+            Commissions = new List<Commission>();
+        }
+
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Patronymic { get; set; }

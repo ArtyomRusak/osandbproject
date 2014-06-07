@@ -42,7 +42,7 @@
             this.btnMainEmployee = new System.Windows.Forms.ToolStripSplitButton();
             this.btnAddEmployee = new System.Windows.Forms.ToolStripMenuItem();
             this.editEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDeleteEmployee = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnViewCommissions = new System.Windows.Forms.ToolStripSplitButton();
             this.btnAddComission = new System.Windows.Forms.ToolStripMenuItem();
@@ -178,7 +178,7 @@
             this.btnMainEmployee.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAddEmployee,
             this.editEmployeeToolStripMenuItem,
-            this.deleteEmployeeToolStripMenuItem});
+            this.btnDeleteEmployee});
             this.btnMainEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnMainEmployee.Image")));
             this.btnMainEmployee.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnMainEmployee.Name = "btnMainEmployee";
@@ -202,12 +202,13 @@
             this.editEmployeeToolStripMenuItem.Text = "Edit employee";
             this.editEmployeeToolStripMenuItem.Click += new System.EventHandler(this.editEmployeeToolStripMenuItem_Click);
             // 
-            // deleteEmployeeToolStripMenuItem
+            // btnDeleteEmployee
             // 
-            this.deleteEmployeeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteEmployeeToolStripMenuItem.Image")));
-            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
-            this.deleteEmployeeToolStripMenuItem.Text = "Remove employee";
+            this.btnDeleteEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteEmployee.Image")));
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(170, 30);
+            this.btnDeleteEmployee.Text = "Remove employee";
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
             // 
             // toolStripSeparator2
             // 
@@ -271,7 +272,7 @@
             // 
             this.btnEditMeeting.Image = ((System.Drawing.Image)(resources.GetObject("btnEditMeeting.Image")));
             this.btnEditMeeting.Name = "btnEditMeeting";
-            this.btnEditMeeting.Size = new System.Drawing.Size(160, 30);
+            this.btnEditMeeting.Size = new System.Drawing.Size(153, 30);
             this.btnEditMeeting.Text = "Edit meeting";
             this.btnEditMeeting.Click += new System.EventHandler(this.btnEditMeeting_Click);
             // 
@@ -279,7 +280,7 @@
             // 
             this.deleteMeetingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteMeetingToolStripMenuItem.Image")));
             this.deleteMeetingToolStripMenuItem.Name = "deleteMeetingToolStripMenuItem";
-            this.deleteMeetingToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
+            this.deleteMeetingToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
             this.deleteMeetingToolStripMenuItem.Text = "Delete meeting";
             // 
             // toolStripSeparator10
@@ -471,7 +472,7 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.ToolStripSplitButton btnMainEmployee;
         private System.Windows.Forms.ToolStripMenuItem btnAddEmployee;
-        private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnDeleteEmployee;
         private System.Windows.Forms.ToolStripSplitButton btnViewCommissions;
         private System.Windows.Forms.ToolStripMenuItem btnAddComission;
         private System.Windows.Forms.ToolStripMenuItem deleteComissionToolStripMenuItem;

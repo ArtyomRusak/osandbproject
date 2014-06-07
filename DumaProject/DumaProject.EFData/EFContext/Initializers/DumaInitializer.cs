@@ -80,6 +80,14 @@ namespace DumaProject.EFData.EFContext.Initializers
             var role2 = new RoleMember {Value = "Deputy"};
             context.RoleMembers.Add(role);
             context.RoleMembers.Add(role2);
+
+            context.SaveChanges();
+
+            var profile1 = new ProfileCommission {Description = "Profile 1"};
+            var profile2 = new ProfileCommission {Description = "Profile 2"};
+            context.ProfileCommissions.Add(profile1);
+            context.ProfileCommissions.Add(profile2);
+
             context.SaveChanges();
         }
     }

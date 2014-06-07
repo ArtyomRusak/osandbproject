@@ -9,7 +9,7 @@ namespace DumaProject.EFData.EFContext.Mappings
         {
             HasKey(e => e.Id);
             Property(e => e.Name).IsRequired().HasMaxLength(30);
-            HasRequired(e => e.President).WithMany().HasForeignKey(e => e.PresidentId);
+            HasRequired(e => e.President).WithMany().HasForeignKey(e => e.PresidentId).WillCascadeOnDelete();
             HasMany(e => e.Consist).WithMany(e => e.Commissions);
             HasMany(e => e.Meetings).WithMany();
             HasMany(e => e.JournalRecords).WithMany();

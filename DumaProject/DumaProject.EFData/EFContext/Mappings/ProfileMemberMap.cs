@@ -12,7 +12,7 @@ namespace DumaProject.EFData.EFContext.Mappings
             //Property(e => e.MobileTelephone1).IsRequired().HasMaxLength(20);
             //Property(e => e.HomeNumber).IsRequired().HasMaxLength(20);
             //Property(e => e.MobileTelephone2).HasMaxLength(20);
-            HasRequired(e => e.Member).WithMany().HasForeignKey(e => e.MemberId).WillCascadeOnDelete(false);
+            HasRequired(e => e.Member).WithMany().HasForeignKey(e => e.MemberId).WillCascadeOnDelete(true);
         }
     }
 }

@@ -148,5 +148,20 @@ namespace DumaProject.Services
                 throw new MeetingServiceException(ex);
             }
         }
+
+        public List<Meeting> GetAllMeetings()
+        {
+            var meetingRepository = RepositoryFactory.GetMeetingRepository();
+
+            try
+            {
+                var meetings = meetingRepository.All().ToList();
+                return meetings;
+            }
+            catch (Exception ex)
+            {
+                throw new MeetingServiceException(ex);
+            }
+        }
     }
 }

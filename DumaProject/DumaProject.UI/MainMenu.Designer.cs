@@ -49,9 +49,8 @@
             this.editComissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteComissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.addMeetingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editMeetingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnViewMeetings = new System.Windows.Forms.ToolStripSplitButton();
+            this.btnEditMeeting = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteMeetingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -65,11 +64,20 @@
             this.profileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.presidentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commissionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvMeetings = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.venueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durationInMinutesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commissionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meetingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommissions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commissionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMeetings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meetingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMembers
@@ -151,7 +159,7 @@
             this.toolStripSeparator2,
             this.btnViewCommissions,
             this.toolStripSeparator9,
-            this.toolStripSplitButton1,
+            this.btnViewMeetings,
             this.toolStripSeparator10,
             this.toolStripButton1,
             this.toolStripSeparator6,
@@ -247,37 +255,31 @@
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
             // 
-            // toolStripSplitButton1
+            // btnViewMeetings
             // 
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addMeetingToolStripMenuItem,
-            this.editMeetingToolStripMenuItem,
+            this.btnViewMeetings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnEditMeeting,
             this.deleteMeetingToolStripMenuItem});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(90, 28);
-            this.toolStripSplitButton1.Text = "Meetings";
+            this.btnViewMeetings.Image = ((System.Drawing.Image)(resources.GetObject("btnViewMeetings.Image")));
+            this.btnViewMeetings.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnViewMeetings.Name = "btnViewMeetings";
+            this.btnViewMeetings.Size = new System.Drawing.Size(90, 28);
+            this.btnViewMeetings.Text = "Meetings";
+            this.btnViewMeetings.ButtonClick += new System.EventHandler(this.btnViewMeetings_ButtonClick);
             // 
-            // addMeetingToolStripMenuItem
+            // btnEditMeeting
             // 
-            this.addMeetingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addMeetingToolStripMenuItem.Image")));
-            this.addMeetingToolStripMenuItem.Name = "addMeetingToolStripMenuItem";
-            this.addMeetingToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
-            this.addMeetingToolStripMenuItem.Text = "Add meeting";
-            // 
-            // editMeetingToolStripMenuItem
-            // 
-            this.editMeetingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editMeetingToolStripMenuItem.Image")));
-            this.editMeetingToolStripMenuItem.Name = "editMeetingToolStripMenuItem";
-            this.editMeetingToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
-            this.editMeetingToolStripMenuItem.Text = "Edit meeting";
+            this.btnEditMeeting.Image = ((System.Drawing.Image)(resources.GetObject("btnEditMeeting.Image")));
+            this.btnEditMeeting.Name = "btnEditMeeting";
+            this.btnEditMeeting.Size = new System.Drawing.Size(160, 30);
+            this.btnEditMeeting.Text = "Edit meeting";
+            this.btnEditMeeting.Click += new System.EventHandler(this.btnEditMeeting_Click);
             // 
             // deleteMeetingToolStripMenuItem
             // 
             this.deleteMeetingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteMeetingToolStripMenuItem.Image")));
             this.deleteMeetingToolStripMenuItem.Name = "deleteMeetingToolStripMenuItem";
-            this.deleteMeetingToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
+            this.deleteMeetingToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.deleteMeetingToolStripMenuItem.Text = "Delete meeting";
             // 
             // toolStripSeparator10
@@ -335,7 +337,7 @@
             this.dgvCommissions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCommissions.Size = new System.Drawing.Size(554, 395);
             this.dgvCommissions.TabIndex = 14;
-            this.dgvCommissions.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommissions_CellContentDoubleClick);
+            this.dgvCommissions.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommissions_CellDoubleClick);
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -370,12 +372,74 @@
             // 
             this.commissionBindingSource.DataSource = typeof(DumaProject.Core.Entities.Commission);
             // 
+            // dgvMeetings
+            // 
+            this.dgvMeetings.AllowUserToAddRows = false;
+            this.dgvMeetings.AllowUserToDeleteRows = false;
+            this.dgvMeetings.AutoGenerateColumns = false;
+            this.dgvMeetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMeetings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn2,
+            this.dateDataGridViewTextBoxColumn,
+            this.venueDataGridViewTextBoxColumn,
+            this.durationInMinutesDataGridViewTextBoxColumn,
+            this.commissionDataGridViewTextBoxColumn});
+            this.dgvMeetings.DataSource = this.meetingBindingSource;
+            this.dgvMeetings.Location = new System.Drawing.Point(140, 34);
+            this.dgvMeetings.Name = "dgvMeetings";
+            this.dgvMeetings.ReadOnly = true;
+            this.dgvMeetings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMeetings.Size = new System.Drawing.Size(554, 395);
+            this.dgvMeetings.TabIndex = 15;
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // venueDataGridViewTextBoxColumn
+            // 
+            this.venueDataGridViewTextBoxColumn.DataPropertyName = "Venue";
+            this.venueDataGridViewTextBoxColumn.HeaderText = "Venue";
+            this.venueDataGridViewTextBoxColumn.Name = "venueDataGridViewTextBoxColumn";
+            this.venueDataGridViewTextBoxColumn.ReadOnly = true;
+            this.venueDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // durationInMinutesDataGridViewTextBoxColumn
+            // 
+            this.durationInMinutesDataGridViewTextBoxColumn.DataPropertyName = "DurationInMinutes";
+            this.durationInMinutesDataGridViewTextBoxColumn.HeaderText = "DurationInMinutes";
+            this.durationInMinutesDataGridViewTextBoxColumn.Name = "durationInMinutesDataGridViewTextBoxColumn";
+            this.durationInMinutesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // commissionDataGridViewTextBoxColumn
+            // 
+            this.commissionDataGridViewTextBoxColumn.DataPropertyName = "Commission";
+            this.commissionDataGridViewTextBoxColumn.HeaderText = "Commission";
+            this.commissionDataGridViewTextBoxColumn.Name = "commissionDataGridViewTextBoxColumn";
+            this.commissionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // meetingBindingSource
+            // 
+            this.meetingBindingSource.DataSource = typeof(DumaProject.Core.Entities.Meeting);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(821, 441);
+            this.Controls.Add(this.dgvMeetings);
             this.Controls.Add(this.dgvCommissions);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvMembers);
@@ -388,6 +452,8 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommissions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commissionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMeetings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meetingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,14 +475,13 @@
         private System.Windows.Forms.ToolStripSplitButton btnViewCommissions;
         private System.Windows.Forms.ToolStripMenuItem btnAddComission;
         private System.Windows.Forms.ToolStripMenuItem deleteComissionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripMenuItem addMeetingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSplitButton btnViewMeetings;
         private System.Windows.Forms.ToolStripMenuItem deleteMeetingToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem editEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editComissionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editMeetingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnEditMeeting;
         private System.Windows.Forms.BindingSource memberBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
@@ -430,6 +495,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn profileDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn presidentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvMeetings;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn venueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn durationInMinutesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commissionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource meetingBindingSource;
     }
 }
 

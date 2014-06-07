@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace duma_project
+namespace DumaProject.UI
 {
     public partial class ViewMeeting : Form
     {

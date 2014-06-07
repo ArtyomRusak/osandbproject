@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DumaProject.BLInterfaces.BLLInterfaces;
 using DumaProject.Core.Entities;
 using DumaProject.EFData;
 using DumaProject.EFData.EFContext;
@@ -12,7 +13,7 @@ namespace DumaProject.UI
     public partial class AddChangeMeeting : Form
     {
         private readonly long _meetingId;
-        private readonly int _commissionId;
+        private int _commissionId;
         private readonly DumaContext _context = new DumaContext(Resources.ConnectionString);
         Meeting _meeting;
         private readonly UnitOfWork _unitOfWork;
@@ -31,30 +32,42 @@ namespace DumaProject.UI
             _unitOfWork = new UnitOfWork(_context);
         }
 
-        public AddChangeMeeting(long meetingId, int commissionId)
+        public AddChangeMeeting(long meetingId)
         {
             InitializeComponent();
             _meetingId = meetingId;
-            _commissionId = commissionId;
+            _unitOfWork = new UnitOfWork(_context);
         }
+
+        //public AddChangeMeeting(long meetingId, int commissionId)
+        //{
+        //    InitializeComponent();
+        //    _meetingId = meetingId;
+        //    _commissionId = commissionId;
+        //}
 
         private void AddChangeMeeting_Load(object sender, EventArgs e)
         {
             var commissionService = new CommissionService(_unitOfWork, _unitOfWork);
             var meetingService = new MeetingService(_unitOfWork, _unitOfWork);
 
-            var members = commissionService.GetMembersOfCommission(_commissionId);
-            _commission = commissionService.GetCommissionById(_commissionId);
-
-            lbxMembers.DataSource = members;
+            if (_commissionId != 0)
+            {
+                SetMembersAndCommission(commissionService);
+            }
 
             if (_meetingId != 0)
             {
                 _meeting = meetingService.GetMeetingById(_meetingId);
+
+                _commissionId = _meeting.Commission.Id;
+                SetMembersAndCommission(commissionService);
+
                 Venue = _meeting.Venue;
                 dtpDate.Value = _meeting.Date;
                 dtpBeginning.Value = _meeting.Date;
                 dtpEnding.Value = _meeting.Date.AddMinutes(_meeting.DurationInMinutes);
+                SetDatasourcesToNull();
                 lbxMeetingMembers.DataSource = _meeting.Participants;
                 lbxMembers.DataSource = GetMembersExceptMeeting();
             }
@@ -153,6 +166,14 @@ namespace DumaProject.UI
             var span = endingTime - beginningTime;
             var duration = (int)span.TotalMinutes;
             return duration;
+        }
+
+        private void SetMembersAndCommission(ICommissionService commissionService)
+        {
+            var members = commissionService.GetMembersOfCommission(_commissionId);
+            _commission = commissionService.GetCommissionById(_commissionId);
+
+            lbxMembers.DataSource = members;
         }
     }
 }

@@ -16,5 +16,6 @@ namespace DumaProject.BLInterfaces.BLLInterfaces
         void CancelMeeting(long meetingId);
         void EndMeeting(long meetingId);
         List<Meeting> GetMeetingsOfMemberParticipate(int memberId);
+        List<Meeting> GetAllMeetings();
     }
 }

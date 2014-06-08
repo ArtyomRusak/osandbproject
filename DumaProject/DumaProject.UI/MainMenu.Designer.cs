@@ -85,6 +85,7 @@
             this.dgvMembers.AllowUserToAddRows = false;
             this.dgvMembers.AllowUserToDeleteRows = false;
             this.dgvMembers.AutoGenerateColumns = false;
+            this.dgvMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -94,11 +95,11 @@
             this.passportDataDataGridViewTextBoxColumn,
             this.roleDataGridViewTextBoxColumn});
             this.dgvMembers.DataSource = this.memberBindingSource;
-            this.dgvMembers.Location = new System.Drawing.Point(140, 34);
+            this.dgvMembers.Location = new System.Drawing.Point(12, 34);
             this.dgvMembers.Name = "dgvMembers";
             this.dgvMembers.ReadOnly = true;
             this.dgvMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMembers.Size = new System.Drawing.Size(554, 395);
+            this.dgvMembers.Size = new System.Drawing.Size(686, 395);
             this.dgvMembers.TabIndex = 0;
             this.dgvMembers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ChooseMember);
             // 
@@ -169,7 +170,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(821, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(710, 31);
             this.toolStrip1.TabIndex = 13;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -325,6 +326,7 @@
             this.dgvCommissions.AllowUserToAddRows = false;
             this.dgvCommissions.AllowUserToDeleteRows = false;
             this.dgvCommissions.AutoGenerateColumns = false;
+            this.dgvCommissions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCommissions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCommissions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn1,
@@ -332,11 +334,11 @@
             this.profileDataGridViewTextBoxColumn,
             this.presidentDataGridViewTextBoxColumn});
             this.dgvCommissions.DataSource = this.commissionBindingSource;
-            this.dgvCommissions.Location = new System.Drawing.Point(140, 34);
+            this.dgvCommissions.Location = new System.Drawing.Point(12, 34);
             this.dgvCommissions.Name = "dgvCommissions";
             this.dgvCommissions.ReadOnly = true;
             this.dgvCommissions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCommissions.Size = new System.Drawing.Size(554, 395);
+            this.dgvCommissions.Size = new System.Drawing.Size(686, 395);
             this.dgvCommissions.TabIndex = 14;
             this.dgvCommissions.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommissions_CellDoubleClick);
             // 
@@ -378,6 +380,7 @@
             this.dgvMeetings.AllowUserToAddRows = false;
             this.dgvMeetings.AllowUserToDeleteRows = false;
             this.dgvMeetings.AutoGenerateColumns = false;
+            this.dgvMeetings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMeetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMeetings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn2,
@@ -386,11 +389,11 @@
             this.durationInMinutesDataGridViewTextBoxColumn,
             this.commissionDataGridViewTextBoxColumn});
             this.dgvMeetings.DataSource = this.meetingBindingSource;
-            this.dgvMeetings.Location = new System.Drawing.Point(140, 34);
+            this.dgvMeetings.Location = new System.Drawing.Point(12, 34);
             this.dgvMeetings.Name = "dgvMeetings";
             this.dgvMeetings.ReadOnly = true;
             this.dgvMeetings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMeetings.Size = new System.Drawing.Size(554, 395);
+            this.dgvMeetings.Size = new System.Drawing.Size(686, 395);
             this.dgvMeetings.TabIndex = 15;
             // 
             // idDataGridViewTextBoxColumn2
@@ -414,7 +417,6 @@
             this.venueDataGridViewTextBoxColumn.HeaderText = "Venue";
             this.venueDataGridViewTextBoxColumn.Name = "venueDataGridViewTextBoxColumn";
             this.venueDataGridViewTextBoxColumn.ReadOnly = true;
-            this.venueDataGridViewTextBoxColumn.Width = 200;
             // 
             // durationInMinutesDataGridViewTextBoxColumn
             // 
@@ -439,7 +441,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(821, 441);
+            this.ClientSize = new System.Drawing.Size(710, 441);
             this.Controls.Add(this.dgvMeetings);
             this.Controls.Add(this.dgvCommissions);
             this.Controls.Add(this.toolStrip1);

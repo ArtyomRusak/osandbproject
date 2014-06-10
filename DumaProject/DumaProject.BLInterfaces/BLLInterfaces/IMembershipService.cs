@@ -12,5 +12,6 @@ namespace DumaProject.BLInterfaces.BLLInterfaces
         void ChangeRole(int memberId, RoleMember role);
         List<Commission> GetCommissionsOfMember(int memberId);
         List<Member> GetMembersExceptOfCommission(int commissionId);
+        List<Member> GetMembersForPresident();
     }
 }

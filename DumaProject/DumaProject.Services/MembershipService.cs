@@ -146,6 +146,23 @@ namespace DumaProject.Services
             }
         }
 
+        public List<Member> GetMembersForPresident()
+        {
+            var memberRepository = RepositoryFactory.GetMemberRepository();
+            var roleMemberRepository = RepositoryFactory.GetRoleMemberRepository();
+
+            try
+            {
+                var role = roleMemberRepository.Find(e => e.Value == "Депутат");
+                var members = memberRepository.Filter(e => e.Role.Id == role.Id).ToList();
+                return members;
+            }
+            catch (Exception ex)
+            {
+                throw new MembershipServiceException(ex);
+            }
+        }
+
         public List<Member> GetAllMembers()
         {
             var memberRepository = RepositoryFactory.GetMemberRepository();

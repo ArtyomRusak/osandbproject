@@ -40,7 +40,7 @@ namespace DumaProject.UI
             var profileCommissionService = new ProfileCommissionService(unitOfWork, unitOfWork);
             var membershipService = new MembershipService(unitOfWork, unitOfWork);
 
-            var membersForPresident = membershipService.GetAllMembers();
+            var membersForPresident = membershipService.GetMembersForPresident();
             var profiles = profileCommissionService.GetAllProfiles();
 
             if (_commissionId != 0)

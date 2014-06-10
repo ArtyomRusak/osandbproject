@@ -201,6 +201,13 @@ namespace DumaProject.UI
             }
         }
 
+        private void dgvMeetings_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var meetingId = Convert.ToInt64(dgvMeetings.Rows[e.RowIndex].Cells[0].Value.ToString());
+            var form = new ViewMeeting(meetingId);
+            form.ShowDialog();
+        }
+
         //TODO: Do method to refresh all dataGridViews.
     }
 }

@@ -1,11 +1,9 @@
-﻿using DumaProject.Core.Entities;
+﻿using System.Windows.Forms;
 using DumaProject.EFData;
 using DumaProject.EFData.EFContext;
 using DumaProject.Services;
-using DumaProject.UI;
-using System.Windows.Forms;
 
-namespace duma_project
+namespace DumaProject.UI
 {
     public partial class ViewComissionMembers : Form
     {

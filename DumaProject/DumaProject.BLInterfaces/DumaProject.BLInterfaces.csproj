@@ -45,6 +45,7 @@
     <Compile Include="BLLInterfaces\IMembershipService.cs" />
     <Compile Include="BLLInterfaces\IProfileCommissionService.cs" />
     <Compile Include="BLLInterfaces\IProfileMemberService.cs" />
+    <Compile Include="BLLInterfaces\IReportService.cs" />
     <Compile Include="BLLInterfaces\IService.cs" />
     <Compile Include="Exceptions\CommissionServiceException.cs" />
     <Compile Include="Exceptions\JournalServiceException.cs" />

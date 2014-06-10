@@ -115,8 +115,23 @@ namespace DumaProject.Services
         {
             Guard.AgainstNullReference(member, "member");
 
+            var journalRecordRepository = RepositoryFactory.GetJournalRecordRepository();
+            var roleCommissionRepository = RepositoryFactory.GetRoleCommissionRepository();
+
             var commission = GetCommissionById(commissionId);
             commission.Consist.Add(member);
+
+            //var journalRecord = new JournalRecord();
+            //if (member.Id == commission.PresidentId)
+            //{
+            //    var role = roleCommissionRepository.Find(e => e.Value == "Президент");
+            //    journalRecord.RoleCommissionId = role.Id;
+            //}
+            //else
+            //{
+            //    var role = roleCommissionRepository.Find(e => e.Value == "Член");
+            //    journalRecord.RoleCommissionId = role.Id;
+            //}
         }
 
         public void ExcludeMemberFromCommission(int commissionId, Member member)

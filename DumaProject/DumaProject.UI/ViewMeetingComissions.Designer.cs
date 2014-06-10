@@ -61,6 +61,7 @@
             this.dgvMeetings.Location = new System.Drawing.Point(13, 108);
             this.dgvMeetings.Name = "dgvMeetings";
             this.dgvMeetings.ReadOnly = true;
+            this.dgvMeetings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMeetings.Size = new System.Drawing.Size(647, 251);
             this.dgvMeetings.TabIndex = 0;
             // 

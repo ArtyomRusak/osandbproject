@@ -1,4 +1,4 @@
-﻿namespace duma_project
+﻿namespace DumaProject.UI
 {
     partial class ViewMeetingMembers
     {

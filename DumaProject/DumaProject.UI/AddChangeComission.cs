@@ -94,6 +94,7 @@ namespace DumaProject.UI
                     _commissionId = _commission.Id;
                     unitOfWork.Commit();
                     MessageBox.Show("Successfully added commission!");
+                    Close();
                 }
                 else
                 {
@@ -103,6 +104,7 @@ namespace DumaProject.UI
                     commissionService.UpdateCommission(_commission);
                     unitOfWork.Commit();
                     MessageBox.Show("Successfully update commission!");
+                    Close();
                 }
             }
             catch (Exception)
@@ -206,6 +208,11 @@ namespace DumaProject.UI
         {
             lbxMembers.DataSource = null;
             lbxCommissionMembers.DataSource = null;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

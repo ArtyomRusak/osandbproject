@@ -104,10 +104,6 @@ namespace DumaProject.UI
             Mobile = _profile.MobileTelephone1;
         }
 
-        private void button7_Click(object sender, System.EventArgs e)
-        {
-            Close();
-        }
 
         private void ViewEmployee_FormClosed(object sender, FormClosedEventArgs e)
         {

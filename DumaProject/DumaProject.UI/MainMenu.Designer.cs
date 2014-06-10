@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.dgvMembers = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passportDataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,7 @@
             this.btnEditMeeting = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteMeetingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnHelp = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
@@ -89,8 +89,8 @@
             this.dgvMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
             this.surnameDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
             this.patronymicDataGridViewTextBoxColumn,
             this.passportDataDataGridViewTextBoxColumn,
             this.roleDataGridViewTextBoxColumn});
@@ -111,19 +111,19 @@
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // surnameDataGridViewTextBoxColumn
             // 
             this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
             this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
             this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
             this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // patronymicDataGridViewTextBoxColumn
             // 
@@ -152,7 +152,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -163,7 +163,7 @@
             this.toolStripSeparator9,
             this.btnViewMeetings,
             this.toolStripSeparator10,
-            this.toolStripButton1,
+            this.tsbtnHelp,
             this.toolStripSeparator6,
             this.toolStripLabel4,
             this.toolStripComboBox1,
@@ -171,7 +171,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(710, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(706, 33);
             this.toolStrip1.TabIndex = 13;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -184,7 +184,7 @@
             this.btnMainEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnMainEmployee.Image")));
             this.btnMainEmployee.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnMainEmployee.Name = "btnMainEmployee";
-            this.btnMainEmployee.Size = new System.Drawing.Size(98, 28);
+            this.btnMainEmployee.Size = new System.Drawing.Size(98, 30);
             this.btnMainEmployee.Text = "Employees";
             this.btnMainEmployee.ButtonClick += new System.EventHandler(this.ViewAllEmployees);
             // 
@@ -215,7 +215,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // btnViewCommissions
             // 
@@ -226,7 +226,7 @@
             this.btnViewCommissions.Image = ((System.Drawing.Image)(resources.GetObject("btnViewCommissions.Image")));
             this.btnViewCommissions.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnViewCommissions.Name = "btnViewCommissions";
-            this.btnViewCommissions.Size = new System.Drawing.Size(99, 28);
+            this.btnViewCommissions.Size = new System.Drawing.Size(99, 30);
             this.btnViewCommissions.Text = "Comissions";
             this.btnViewCommissions.ButtonClick += new System.EventHandler(this.btnViewCommissions_ButtonClick);
             // 
@@ -256,7 +256,7 @@
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 33);
             // 
             // btnViewMeetings
             // 
@@ -266,7 +266,7 @@
             this.btnViewMeetings.Image = ((System.Drawing.Image)(resources.GetObject("btnViewMeetings.Image")));
             this.btnViewMeetings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnViewMeetings.Name = "btnViewMeetings";
-            this.btnViewMeetings.Size = new System.Drawing.Size(90, 28);
+            this.btnViewMeetings.Size = new System.Drawing.Size(90, 30);
             this.btnViewMeetings.Text = "Meetings";
             this.btnViewMeetings.ButtonClick += new System.EventHandler(this.btnViewMeetings_ButtonClick);
             // 
@@ -288,32 +288,33 @@
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 33);
             // 
-            // toolStripButton1
+            // tsbtnHelp
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(57, 28);
-            this.toolStripButton1.Text = "Help";
+            this.tsbtnHelp.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnHelp.Image")));
+            this.tsbtnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnHelp.Name = "tsbtnHelp";
+            this.tsbtnHelp.Size = new System.Drawing.Size(57, 30);
+            this.tsbtnHelp.Text = "Help";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 33);
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel4.Image")));
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(68, 28);
+            this.toolStripLabel4.Size = new System.Drawing.Size(68, 30);
             this.toolStripLabel4.Text = "Search:";
             // 
             // toolStripComboBox1
             // 
+            this.toolStripComboBox1.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(135, 31);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(135, 33);
             // 
             // toolStripTextBox1
             // 
@@ -443,7 +444,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(710, 441);
+            this.ClientSize = new System.Drawing.Size(706, 441);
             this.Controls.Add(this.dgvMeetings);
             this.Controls.Add(this.dgvCommissions);
             this.Controls.Add(this.toolStrip1);
@@ -451,6 +452,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "State Duma";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).EndInit();
@@ -484,18 +486,12 @@
         private System.Windows.Forms.ToolStripMenuItem deleteComissionToolStripMenuItem;
         private System.Windows.Forms.ToolStripSplitButton btnViewMeetings;
         private System.Windows.Forms.ToolStripMenuItem deleteMeetingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsbtnHelp;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem editEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editComissionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnEditMeeting;
         private System.Windows.Forms.BindingSource memberBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passportDataDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgvCommissions;
         private System.Windows.Forms.BindingSource commissionBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
@@ -509,6 +505,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn durationInMinutesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commissionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource meetingBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passportDataDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
     }
 }
 

@@ -48,6 +48,7 @@
             this.dgvMeetings.AllowUserToAddRows = false;
             this.dgvMeetings.AllowUserToDeleteRows = false;
             this.dgvMeetings.AutoGenerateColumns = false;
+            this.dgvMeetings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMeetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMeetings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -77,7 +78,6 @@
             this.dateDataGridViewTextBoxColumn.HeaderText = "Start Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.Width = 200;
             // 
             // venueDataGridViewTextBoxColumn
             // 
@@ -85,7 +85,6 @@
             this.venueDataGridViewTextBoxColumn.HeaderText = "Venue";
             this.venueDataGridViewTextBoxColumn.Name = "venueDataGridViewTextBoxColumn";
             this.venueDataGridViewTextBoxColumn.ReadOnly = true;
-            this.venueDataGridViewTextBoxColumn.Width = 200;
             // 
             // durationInMinutesDataGridViewTextBoxColumn
             // 

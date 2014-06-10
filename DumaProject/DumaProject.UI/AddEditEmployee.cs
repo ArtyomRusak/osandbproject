@@ -90,8 +90,8 @@ namespace DumaProject.UI
                 {
                     _member = membershipService.CreateMember(tbxName.Text, tbxSurname.Text, tbxPatronymic.Text, tbxPassport.Text, cmbxRole.SelectedItem.ToString());
                     _profile = profileMemberService.CreateProfile(tbxAddress.Text, tbxMobile.Text, tbxHome.Text, _member.Id);
-                    MessageBox.Show("Successfully added new employee");
                     unitOfWork.Commit();
+                    MessageBox.Show("Successfully added new employee");
                     Close();
                 }
                 catch (Exception exception)
@@ -121,6 +121,8 @@ namespace DumaProject.UI
                     unitOfWork.Rollback();
                 }
                 unitOfWork.Commit();
+                MessageBox.Show("Successfully edit employee");
+                Close();
             }
         }
 

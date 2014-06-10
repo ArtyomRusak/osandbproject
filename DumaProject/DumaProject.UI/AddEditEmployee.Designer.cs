@@ -102,12 +102,12 @@
             this.tbxPassport.Location = new System.Drawing.Point(91, 109);
             this.tbxPassport.Name = "tbxPassport";
             this.tbxPassport.Size = new System.Drawing.Size(153, 20);
-            this.tbxPassport.TabIndex = 16;
+            this.tbxPassport.TabIndex = 15;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 26);
+            this.label6.Location = new System.Drawing.Point(18, 52);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 8;
@@ -128,14 +128,14 @@
             this.cmbxRole.Location = new System.Drawing.Point(91, 135);
             this.cmbxRole.Name = "cmbxRole";
             this.cmbxRole.Size = new System.Drawing.Size(153, 21);
-            this.cmbxRole.TabIndex = 17;
+            this.cmbxRole.TabIndex = 16;
             // 
             // tbxSurname
             // 
-            this.tbxSurname.Location = new System.Drawing.Point(91, 52);
+            this.tbxSurname.Location = new System.Drawing.Point(91, 19);
             this.tbxSurname.Name = "tbxSurname";
             this.tbxSurname.Size = new System.Drawing.Size(153, 20);
-            this.tbxSurname.TabIndex = 13;
+            this.tbxSurname.TabIndex = 12;
             // 
             // label8
             // 
@@ -148,10 +148,10 @@
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(91, 26);
+            this.tbxName.Location = new System.Drawing.Point(91, 52);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(153, 20);
-            this.tbxName.TabIndex = 12;
+            this.tbxName.TabIndex = 13;
             // 
             // label4
             // 
@@ -167,12 +167,12 @@
             this.tbxPatronymic.Location = new System.Drawing.Point(91, 83);
             this.tbxPatronymic.Name = "tbxPatronymic";
             this.tbxPatronymic.Size = new System.Drawing.Size(153, 20);
-            this.tbxPatronymic.TabIndex = 15;
+            this.tbxPatronymic.TabIndex = 14;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 52);
+            this.label7.Location = new System.Drawing.Point(18, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 9;
@@ -198,21 +198,21 @@
             this.tbxMobile.Location = new System.Drawing.Point(91, 87);
             this.tbxMobile.Name = "tbxMobile";
             this.tbxMobile.Size = new System.Drawing.Size(153, 20);
-            this.tbxMobile.TabIndex = 18;
+            this.tbxMobile.TabIndex = 19;
             // 
             // tbxHome
             // 
             this.tbxHome.Location = new System.Drawing.Point(91, 61);
             this.tbxHome.Name = "tbxHome";
             this.tbxHome.Size = new System.Drawing.Size(153, 20);
-            this.tbxHome.TabIndex = 17;
+            this.tbxHome.TabIndex = 18;
             // 
             // tbxAddress
             // 
             this.tbxAddress.Location = new System.Drawing.Point(91, 33);
             this.tbxAddress.Name = "tbxAddress";
             this.tbxAddress.Size = new System.Drawing.Size(153, 20);
-            this.tbxAddress.TabIndex = 16;
+            this.tbxAddress.TabIndex = 17;
             // 
             // label1
             // 

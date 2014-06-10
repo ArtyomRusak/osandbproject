@@ -50,7 +50,6 @@
             this.lbxMembers = new System.Windows.Forms.ListBox();
             this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileCommissionBindingSource)).BeginInit();
@@ -68,7 +67,7 @@
             this.cmbxPresident.FormattingEnabled = true;
             this.cmbxPresident.Location = new System.Drawing.Point(128, 82);
             this.cmbxPresident.Name = "cmbxPresident";
-            this.cmbxPresident.Size = new System.Drawing.Size(151, 21);
+            this.cmbxPresident.Size = new System.Drawing.Size(174, 21);
             this.cmbxPresident.TabIndex = 4;
             this.cmbxPresident.ValueMember = "Id";
             // 
@@ -80,7 +79,7 @@
             // 
             this.tbxName.Location = new System.Drawing.Point(128, 30);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(151, 20);
+            this.tbxName.Size = new System.Drawing.Size(174, 20);
             this.tbxName.TabIndex = 2;
             // 
             // label2
@@ -118,9 +117,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(278, 12);
+            this.groupBox1.Location = new System.Drawing.Point(15, 213);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(299, 124);
+            this.groupBox1.Size = new System.Drawing.Size(308, 123);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
@@ -133,7 +132,7 @@
             this.cmbxProfile.FormattingEnabled = true;
             this.cmbxProfile.Location = new System.Drawing.Point(128, 55);
             this.cmbxProfile.Name = "cmbxProfile";
-            this.cmbxProfile.Size = new System.Drawing.Size(151, 21);
+            this.cmbxProfile.Size = new System.Drawing.Size(174, 21);
             this.cmbxProfile.TabIndex = 5;
             this.cmbxProfile.ValueMember = "Id";
             // 
@@ -143,12 +142,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.lbxCommissionMembers);
             this.groupBox2.Controls.Add(this.lbxMembers);
-            this.groupBox2.Location = new System.Drawing.Point(15, 162);
+            this.groupBox2.Location = new System.Drawing.Point(329, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(562, 281);
+            this.groupBox2.Size = new System.Drawing.Size(465, 273);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "List of members";
@@ -159,24 +157,25 @@
             this.panel1.Controls.Add(this.btnActiveMember);
             this.panel1.Controls.Add(this.btnInactiveMember);
             this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Location = new System.Drawing.Point(249, 19);
+            this.panel1.Location = new System.Drawing.Point(451, 288);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(58, 251);
+            this.panel1.Size = new System.Drawing.Size(232, 52);
             this.panel1.TabIndex = 2;
             // 
             // btnExit
             // 
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(4, 184);
+            this.btnExit.Location = new System.Drawing.Point(175, 7);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(51, 37);
+            this.btnExit.Size = new System.Drawing.Size(51, 36);
             this.btnExit.TabIndex = 9;
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnActiveMember
             // 
             this.btnActiveMember.Image = ((System.Drawing.Image)(resources.GetObject("btnActiveMember.Image")));
-            this.btnActiveMember.Location = new System.Drawing.Point(3, 59);
+            this.btnActiveMember.Location = new System.Drawing.Point(117, 7);
             this.btnActiveMember.Name = "btnActiveMember";
             this.btnActiveMember.Size = new System.Drawing.Size(52, 36);
             this.btnActiveMember.TabIndex = 3;
@@ -186,9 +185,9 @@
             // btnInactiveMember
             // 
             this.btnInactiveMember.Image = ((System.Drawing.Image)(resources.GetObject("btnInactiveMember.Image")));
-            this.btnInactiveMember.Location = new System.Drawing.Point(4, 17);
+            this.btnInactiveMember.Location = new System.Drawing.Point(60, 7);
             this.btnInactiveMember.Name = "btnInactiveMember";
-            this.btnInactiveMember.Size = new System.Drawing.Size(51, 36);
+            this.btnInactiveMember.Size = new System.Drawing.Size(51, 37);
             this.btnInactiveMember.TabIndex = 0;
             this.btnInactiveMember.UseVisualStyleBackColor = true;
             this.btnInactiveMember.Click += new System.EventHandler(this.btnInactiveMember_Click);
@@ -196,7 +195,7 @@
             // btnSave
             // 
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(4, 141);
+            this.btnSave.Location = new System.Drawing.Point(3, 7);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(51, 37);
             this.btnSave.TabIndex = 8;
@@ -208,9 +207,9 @@
             this.lbxCommissionMembers.DataSource = this.memberBindingSource1;
             this.lbxCommissionMembers.DisplayMember = "NSP";
             this.lbxCommissionMembers.FormattingEnabled = true;
-            this.lbxCommissionMembers.Location = new System.Drawing.Point(313, 19);
+            this.lbxCommissionMembers.Location = new System.Drawing.Point(239, 19);
             this.lbxCommissionMembers.Name = "lbxCommissionMembers";
-            this.lbxCommissionMembers.Size = new System.Drawing.Size(243, 251);
+            this.lbxCommissionMembers.Size = new System.Drawing.Size(213, 238);
             this.lbxCommissionMembers.TabIndex = 0;
             this.lbxCommissionMembers.ValueMember = "Id";
             // 
@@ -223,9 +222,9 @@
             this.lbxMembers.DataSource = this.memberBindingSource;
             this.lbxMembers.DisplayMember = "NSP";
             this.lbxMembers.FormattingEnabled = true;
-            this.lbxMembers.Location = new System.Drawing.Point(6, 19);
+            this.lbxMembers.Location = new System.Drawing.Point(16, 19);
             this.lbxMembers.Name = "lbxMembers";
-            this.lbxMembers.Size = new System.Drawing.Size(237, 251);
+            this.lbxMembers.Size = new System.Drawing.Size(217, 238);
             this.lbxMembers.TabIndex = 0;
             this.lbxMembers.ValueMember = "Id";
             // 
@@ -238,29 +237,21 @@
             this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(246, 127);
+            this.label4.Size = new System.Drawing.Size(311, 201);
             this.label4.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(246, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AddChangeComission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(592, 446);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(806, 348);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.Name = "AddChangeComission";
             this.Text = "Add comission";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddChangeComission_FormClosing);
             this.Load += new System.EventHandler(this.AddChangeComission_Load);
@@ -295,7 +286,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ComboBox cmbxProfile;
         private System.Windows.Forms.BindingSource profileCommissionBindingSource;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource memberBindingSource1;
         private System.Windows.Forms.BindingSource memberBindingSource;
         private System.Windows.Forms.BindingSource memberBindingSource2;

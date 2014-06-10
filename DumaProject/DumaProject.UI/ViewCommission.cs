@@ -4,6 +4,7 @@ using DumaProject.Core.Entities;
 using DumaProject.EFData;
 using DumaProject.EFData.EFContext;
 using DumaProject.Services;
+using duma_project;
 
 namespace DumaProject.UI
 {
@@ -46,6 +47,12 @@ namespace DumaProject.UI
         private void btnMeetings_Click(object sender, EventArgs e)
         {
             var form = new ViewMeetingComissions(_commissionId);
+            form.ShowDialog();
+        }
+
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            var form = new ViewComissionMembers(_commissionId);
             form.ShowDialog();
         }
     }

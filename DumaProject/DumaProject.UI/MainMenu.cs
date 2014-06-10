@@ -52,7 +52,6 @@ namespace DumaProject.UI
             var memberId = Convert.ToInt32(dgvMembers.Rows[e.RowIndex].Cells[0].Value);
             var form = new ViewEmployee(memberId);
             form.ShowDialog();
-            //UpdateGrids();
         }
 
         private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
@@ -116,6 +115,7 @@ namespace DumaProject.UI
             var memberId = Convert.ToInt32(dgvMembers.CurrentRow.Cells[0].Value);
             var form = new AddEditEmployee(memberId);
             form.ShowDialog();
+            UpdateGrids();
         }
 
         private void UpdateGrids()
